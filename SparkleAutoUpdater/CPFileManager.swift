@@ -66,9 +66,9 @@ final class CPFileManager {
     }
     
     /// returns url of new zip file
-    public class func zip(folderAtPath path: String) throws -> URL {
+    public class func zip(folderAtPath path: String, displayVersion: String) throws -> URL {
         
-        let zippedURL = URL(fileURLWithPath: "\(path)\(arc4random_uniform(100000))").appendingPathExtension("zip")
+        let zippedURL = URL(fileURLWithPath: "\(path)\(displayVersion)").appendingPathExtension("zip")
         
         let task = Process()
         task.launch(withArguments: ["-r", "-q", zippedURL.lastPathComponent, (path as NSString).lastPathComponent],
