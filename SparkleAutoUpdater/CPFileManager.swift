@@ -58,7 +58,8 @@ final class CPFileManager {
             task.launch(withArguments: ["write", infoPlistURL.deletingPathExtension().lastPathComponent, "CFBundleVersion", newBundleVersionString],
                         currentDirectoryPath: infoPlistURL.deletingLastPathComponent().path,
                         launchPath: "/usr/bin/defaults")
-            task.launch(withArguments: ["write", infoPlistURL.deletingPathExtension().lastPathComponent, "CFBundleShortVersionString", newDisplayVersionString],
+            let task2 = Process()
+            task2.launch(withArguments: ["write", infoPlistURL.deletingPathExtension().lastPathComponent, "CFBundleShortVersionString", newDisplayVersionString],
                         currentDirectoryPath: infoPlistURL.deletingLastPathComponent().path,
                         launchPath: "/usr/bin/defaults")
             
