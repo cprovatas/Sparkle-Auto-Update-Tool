@@ -119,7 +119,7 @@ final class CPMainViewController : NSViewController {
             /// 3 - compress .app to zip
             /// 4 - rename .zip
             updateStatus("Zipping and renaming app...")
-            let zipURL = try CPFileManager.zip(folderAtPath: appPath, displayVersion: String)
+            let zipURL = try CPFileManager.zip(folderAtPath: appPath, displayVersion: versionSet.0)
             /// 5 - generate key from .priv file
             updateStatus("Fetching DSA Key...")
             CPFileManager.getSignature(forZipAtURL: zipURL, pathOfDSAKeyFile: dsaPath, { (signature, error) in
