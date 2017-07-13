@@ -1,0 +1,479 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3E07EE441F0DAB94006ED43F /* CPXMLManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E07EE431F0DAB94006ED43F /* CPXMLManager.swift */; };
+		3E07EE511F0DBF00006ED43F /* libxml2.2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E07EE501F0DBEF2006ED43F /* libxml2.2.tbd */; };
+		3E07EE521F0DBF00006ED43F /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E07EE4F1F0DBEF2006ED43F /* libxml2.tbd */; };
+		3E92DABC1F0B15F900D98D7B /* generate_keys in Resources */ = {isa = PBXBuildFile; fileRef = 3E92DAB61F0B15F900D98D7B /* generate_keys */; };
+		3E92DABD1F0B15F900D98D7B /* BinaryDelta in Resources */ = {isa = PBXBuildFile; fileRef = 3E92DAB71F0B15F900D98D7B /* BinaryDelta */; };
+		3E92DABE1F0B15F900D98D7B /* generate_appcast in Resources */ = {isa = PBXBuildFile; fileRef = 3E92DAB81F0B15F900D98D7B /* generate_appcast */; };
+		3E92DABF1F0B15F900D98D7B /* sign_update in Resources */ = {isa = PBXBuildFile; fileRef = 3E92DAB91F0B15F900D98D7B /* sign_update */; };
+		3E92DAC01F0B15F900D98D7B /* BinaryDelta.dSYM in Resources */ = {isa = PBXBuildFile; fileRef = 3E92DABA1F0B15F900D98D7B /* BinaryDelta.dSYM */; };
+		3E92DAC11F0B15F900D98D7B /* generate_appcast.dSYM in Resources */ = {isa = PBXBuildFile; fileRef = 3E92DABB1F0B15F900D98D7B /* generate_appcast.dSYM */; };
+		3E92DAD81F0B24AD00D98D7B /* CPFTPManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E92DAD71F0B24AD00D98D7B /* CPFTPManager.swift */; };
+		3ED6BADF1F099AEA0008993A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED6BADE1F099AEA0008993A /* AppDelegate.swift */; };
+		3ED6BAE11F099AEA0008993A /* CPMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED6BAE01F099AEA0008993A /* CPMainViewController.swift */; };
+		3ED6BAE31F099AEA0008993A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3ED6BAE21F099AEA0008993A /* Assets.xcassets */; };
+		3ED6BAE61F099AEA0008993A /* CPMainWindow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3ED6BAE41F099AEA0008993A /* CPMainWindow.storyboard */; };
+		3ED6BAF11F09B1AE0008993A /* NSTextField+UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED6BAF01F09B1AE0008993A /* NSTextField+UserDefaults.swift */; };
+		3ED6BAF41F09BA460008993A /* CPFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED6BAF31F09BA460008993A /* CPFileManager.swift */; };
+		3ED6BAF61F09C0740008993A /* CPExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED6BAF51F09C0740008993A /* CPExtensions.swift */; };
+		743F8583DE80FC10E34FBA58 /* Pods_SparkleAutoUpdater.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B06B17BF3BB182C2D95CB18 /* Pods_SparkleAutoUpdater.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3E07EE431F0DAB94006ED43F /* CPXMLManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPXMLManager.swift; sourceTree = "<group>"; };
+		3E07EE4F1F0DBEF2006ED43F /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
+		3E07EE501F0DBEF2006ED43F /* libxml2.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.2.tbd; path = usr/lib/libxml2.2.tbd; sourceTree = SDKROOT; };
+		3E92DAB61F0B15F900D98D7B /* generate_keys */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = generate_keys; path = "../../../Downloads/Sparkle-1.17.0/bin/generate_keys"; sourceTree = "<group>"; };
+		3E92DAB71F0B15F900D98D7B /* BinaryDelta */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = BinaryDelta; path = "../../../Downloads/Sparkle-1.17.0/bin/BinaryDelta"; sourceTree = "<group>"; };
+		3E92DAB81F0B15F900D98D7B /* generate_appcast */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = generate_appcast; path = "../../../Downloads/Sparkle-1.17.0/bin/generate_appcast"; sourceTree = "<group>"; };
+		3E92DAB91F0B15F900D98D7B /* sign_update */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = sign_update; path = "../../../Downloads/Sparkle-1.17.0/bin/sign_update"; sourceTree = "<group>"; };
+		3E92DABA1F0B15F900D98D7B /* BinaryDelta.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = BinaryDelta.dSYM; path = "../../../Downloads/Sparkle-1.17.0/bin/BinaryDelta.dSYM"; sourceTree = "<group>"; };
+		3E92DABB1F0B15F900D98D7B /* generate_appcast.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = generate_appcast.dSYM; path = "../../../Downloads/Sparkle-1.17.0/bin/generate_appcast.dSYM"; sourceTree = "<group>"; };
+		3E92DACE1F0B21FA00D98D7B /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		3E92DACF1F0B220600D98D7B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3E92DAD71F0B24AD00D98D7B /* CPFTPManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPFTPManager.swift; sourceTree = "<group>"; };
+		3ED6BADB1F099AEA0008993A /* SparkleAutoUpdater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SparkleAutoUpdater.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3ED6BADE1F099AEA0008993A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3ED6BAE01F099AEA0008993A /* CPMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPMainViewController.swift; sourceTree = "<group>"; };
+		3ED6BAE21F099AEA0008993A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3ED6BAE51F099AEA0008993A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/CPMainWindow.storyboard; sourceTree = "<group>"; };
+		3ED6BAE71F099AEA0008993A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3ED6BAE81F099AEA0008993A /* SparkleAutoUpdater.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SparkleAutoUpdater.entitlements; sourceTree = "<group>"; };
+		3ED6BAF01F09B1AE0008993A /* NSTextField+UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSTextField+UserDefaults.swift"; sourceTree = "<group>"; };
+		3ED6BAF31F09BA460008993A /* CPFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPFileManager.swift; sourceTree = "<group>"; };
+		3ED6BAF51F09C0740008993A /* CPExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPExtensions.swift; sourceTree = "<group>"; };
+		5B06B17BF3BB182C2D95CB18 /* Pods_SparkleAutoUpdater.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SparkleAutoUpdater.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD53ACD87B520367B50A4064 /* Pods-SparkleAutoUpdater.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SparkleAutoUpdater.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SparkleAutoUpdater/Pods-SparkleAutoUpdater.debug.xcconfig"; sourceTree = "<group>"; };
+		F57B682795F62AEA0EBD1A51 /* Pods-SparkleAutoUpdater.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SparkleAutoUpdater.release.xcconfig"; path = "Pods/Target Support Files/Pods-SparkleAutoUpdater/Pods-SparkleAutoUpdater.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3ED6BAD81F099AEA0008993A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E07EE511F0DBF00006ED43F /* libxml2.2.tbd in Frameworks */,
+				3E07EE521F0DBF00006ED43F /* libxml2.tbd in Frameworks */,
+				743F8583DE80FC10E34FBA58 /* Pods_SparkleAutoUpdater.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3E92DAB51F0B15E500D98D7B /* Sparkle Key Generator */ = {
+			isa = PBXGroup;
+			children = (
+				3E92DAB71F0B15F900D98D7B /* BinaryDelta */,
+				3E92DABA1F0B15F900D98D7B /* BinaryDelta.dSYM */,
+				3E92DAB81F0B15F900D98D7B /* generate_appcast */,
+				3E92DABB1F0B15F900D98D7B /* generate_appcast.dSYM */,
+				3E92DAB61F0B15F900D98D7B /* generate_keys */,
+				3E92DAB91F0B15F900D98D7B /* sign_update */,
+			);
+			name = "Sparkle Key Generator";
+			sourceTree = "<group>";
+		};
+		3E92DACD1F0B21FA00D98D7B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3E07EE501F0DBEF2006ED43F /* libxml2.2.tbd */,
+				3E07EE4F1F0DBEF2006ED43F /* libxml2.tbd */,
+				3E92DACF1F0B220600D98D7B /* Foundation.framework */,
+				3E92DACE1F0B21FA00D98D7B /* CFNetwork.framework */,
+				5B06B17BF3BB182C2D95CB18 /* Pods_SparkleAutoUpdater.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3ED6BAD21F099AEA0008993A = {
+			isa = PBXGroup;
+			children = (
+				3ED6BADD1F099AEA0008993A /* SparkleAutoUpdater */,
+				3ED6BADC1F099AEA0008993A /* Products */,
+				3E92DACD1F0B21FA00D98D7B /* Frameworks */,
+				AB99973AF2F08D8EC5FC7BB2 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		3ED6BADC1F099AEA0008993A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3ED6BADB1F099AEA0008993A /* SparkleAutoUpdater.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3ED6BADD1F099AEA0008993A /* SparkleAutoUpdater */ = {
+			isa = PBXGroup;
+			children = (
+				3ED6BADE1F099AEA0008993A /* AppDelegate.swift */,
+				3ED6BAE01F099AEA0008993A /* CPMainViewController.swift */,
+				3ED6BAF21F09BA370008993A /* Utility */,
+				3ED6BAF01F09B1AE0008993A /* NSTextField+UserDefaults.swift */,
+				3ED6BAE21F099AEA0008993A /* Assets.xcassets */,
+				3ED6BAE41F099AEA0008993A /* CPMainWindow.storyboard */,
+				3ED6BAE71F099AEA0008993A /* Info.plist */,
+				3ED6BAE81F099AEA0008993A /* SparkleAutoUpdater.entitlements */,
+			);
+			path = SparkleAutoUpdater;
+			sourceTree = "<group>";
+		};
+		3ED6BAF21F09BA370008993A /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				3E92DAB51F0B15E500D98D7B /* Sparkle Key Generator */,
+				3ED6BAF51F09C0740008993A /* CPExtensions.swift */,
+				3ED6BAF31F09BA460008993A /* CPFileManager.swift */,
+				3E92DAD71F0B24AD00D98D7B /* CPFTPManager.swift */,
+				3E07EE431F0DAB94006ED43F /* CPXMLManager.swift */,
+			);
+			name = Utility;
+			sourceTree = "<group>";
+		};
+		AB99973AF2F08D8EC5FC7BB2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DD53ACD87B520367B50A4064 /* Pods-SparkleAutoUpdater.debug.xcconfig */,
+				F57B682795F62AEA0EBD1A51 /* Pods-SparkleAutoUpdater.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3ED6BADA1F099AEA0008993A /* SparkleAutoUpdater */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3ED6BAEB1F099AEA0008993A /* Build configuration list for PBXNativeTarget "SparkleAutoUpdater" */;
+			buildPhases = (
+				C919F05D7F8F4D00B740FCAD /* [CP] Check Pods Manifest.lock */,
+				3ED6BAD71F099AEA0008993A /* Sources */,
+				3ED6BAD81F099AEA0008993A /* Frameworks */,
+				3ED6BAD91F099AEA0008993A /* Resources */,
+				3EE7DC01038B5833219833D0 /* [CP] Embed Pods Frameworks */,
+				93BC0445CD83050041BD6C2F /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SparkleAutoUpdater;
+			productName = SparkleAutoUpdater;
+			productReference = 3ED6BADB1F099AEA0008993A /* SparkleAutoUpdater.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3ED6BAD31F099AEA0008993A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = "Charlton Provatas";
+				TargetAttributes = {
+					3ED6BADA1F099AEA0008993A = {
+						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 0900;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 3ED6BAD61F099AEA0008993A /* Build configuration list for PBXProject "SparkleAutoUpdater" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3ED6BAD21F099AEA0008993A;
+			productRefGroup = 3ED6BADC1F099AEA0008993A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3ED6BADA1F099AEA0008993A /* SparkleAutoUpdater */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3ED6BAD91F099AEA0008993A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E92DABF1F0B15F900D98D7B /* sign_update in Resources */,
+				3E92DAC01F0B15F900D98D7B /* BinaryDelta.dSYM in Resources */,
+				3ED6BAE31F099AEA0008993A /* Assets.xcassets in Resources */,
+				3ED6BAE61F099AEA0008993A /* CPMainWindow.storyboard in Resources */,
+				3E92DABE1F0B15F900D98D7B /* generate_appcast in Resources */,
+				3E92DABD1F0B15F900D98D7B /* BinaryDelta in Resources */,
+				3E92DAC11F0B15F900D98D7B /* generate_appcast.dSYM in Resources */,
+				3E92DABC1F0B15F900D98D7B /* generate_keys in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3EE7DC01038B5833219833D0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SparkleAutoUpdater/Pods-SparkleAutoUpdater-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		93BC0445CD83050041BD6C2F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SparkleAutoUpdater/Pods-SparkleAutoUpdater-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C919F05D7F8F4D00B740FCAD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3ED6BAD71F099AEA0008993A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3ED6BAF41F09BA460008993A /* CPFileManager.swift in Sources */,
+				3E92DAD81F0B24AD00D98D7B /* CPFTPManager.swift in Sources */,
+				3E07EE441F0DAB94006ED43F /* CPXMLManager.swift in Sources */,
+				3ED6BAE11F099AEA0008993A /* CPMainViewController.swift in Sources */,
+				3ED6BADF1F099AEA0008993A /* AppDelegate.swift in Sources */,
+				3ED6BAF11F09B1AE0008993A /* NSTextField+UserDefaults.swift in Sources */,
+				3ED6BAF61F09C0740008993A /* CPExtensions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3ED6BAE41F099AEA0008993A /* CPMainWindow.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3ED6BAE51F099AEA0008993A /* Base */,
+			);
+			name = CPMainWindow.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3ED6BAE91F099AEA0008993A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3ED6BAEA1F099AEA0008993A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+			};
+			name = Release;
+		};
+		3ED6BAEC1F099AEA0008993A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD53ACD87B520367B50A4064 /* Pods-SparkleAutoUpdater.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = WJQ6ARU45L;
+				INFOPLIST_FILE = SparkleAutoUpdater/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				OTHER_LDFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.charltonprovatas.SparkleAutoUpdater;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_PRECOMPILE_BRIDGING_HEADER = NO;
+				SWIFT_VERSION = 4.0;
+				USER_HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
+			};
+			name = Debug;
+		};
+		3ED6BAED1F099AEA0008993A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F57B682795F62AEA0EBD1A51 /* Pods-SparkleAutoUpdater.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = WJQ6ARU45L;
+				INFOPLIST_FILE = SparkleAutoUpdater/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				OTHER_LDFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.charltonprovatas.SparkleAutoUpdater;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_PRECOMPILE_BRIDGING_HEADER = NO;
+				SWIFT_VERSION = 4.0;
+				USER_HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3ED6BAD61F099AEA0008993A /* Build configuration list for PBXProject "SparkleAutoUpdater" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3ED6BAE91F099AEA0008993A /* Debug */,
+				3ED6BAEA1F099AEA0008993A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3ED6BAEB1F099AEA0008993A /* Build configuration list for PBXNativeTarget "SparkleAutoUpdater" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3ED6BAEC1F099AEA0008993A /* Debug */,
+				3ED6BAED1F099AEA0008993A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3ED6BAD31F099AEA0008993A /* Project object */;
+}

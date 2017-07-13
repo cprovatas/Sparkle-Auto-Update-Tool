@@ -1,0 +1,763 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		12433A837C218AE8AF2BCA9716A0442D /* FileUploadOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0851E8D74C836CC5E00C92009FD1C73 /* FileUploadOperation.swift */; };
+		2CB63B7B6C8182ACBB58FF9067EDBD8E /* rebekka-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E4788E9028FE9C4D63E37D6977C9B2 /* rebekka-dummy.m */; };
+		2CECCEE76A7FE8EDCBF50025C9B9AF52 /* SwiftyXML-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 613119DFA68955B0DFECE218807531AA /* SwiftyXML-dummy.m */; };
+		44884F49D8CF9C48C4A8565833F9B4AD /* rebekka-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F1EBCD7DD00100EE267112DA1FE5C8ED /* rebekka-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		49D05EC2215544E732335083C48A4836 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 270DD1219F1E6CF00379D39F252D87C6 /* Cocoa.framework */; };
+		5E58DE053181D456B89F8036176B8387 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 270DD1219F1E6CF00379D39F252D87C6 /* Cocoa.framework */; };
+		6AA8471795EAA6D1C09F7ECD5D70957F /* SwiftyXML-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 34991C73F77F07468CB509D79C3682C8 /* SwiftyXML-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		836159709E7699732DC759615254C3B9 /* Pods-SparkleAutoUpdater-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C8C6F7BF8B8C4F562FCFCC6643249C4 /* Pods-SparkleAutoUpdater-dummy.m */; };
+		8ED92CA4D6F38DE1E4BC315C58322763 /* Pods-SparkleAutoUpdater-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2143E75EC3D2CA37B562B1608EBAA8B0 /* Pods-SparkleAutoUpdater-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9A58E8B65A65FC2D272469DBB1BA87D6 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F7B37F1ADFC0A1C8C6AF2DE0978FFF /* Session.swift */; };
+		A52F24F177EABDCBCC0F132346331F1C /* DirectoryCreationOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F5DA7172435F06B19FC51357D31424 /* DirectoryCreationOperation.swift */; };
+		A5D2A3D3742D904F7A4EA08A3EA015E8 /* Operation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15991E1934E2F08B3FE933F1D41CBED7 /* Operation.swift */; };
+		C31E86667907B33BD3152581D5A2CA2E /* WriteStreamOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD93F991CCF1AC915417E85799EC0AC8 /* WriteStreamOperation.swift */; };
+		D1C10399EEE5DBCFF4C4E20CCEF88C3E /* FileDownloadOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A94748D7FC6A000DDD0F219755308E /* FileDownloadOperation.swift */; };
+		D5A83381402E2AB679CBCC529564871E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 270DD1219F1E6CF00379D39F252D87C6 /* Cocoa.framework */; };
+		D94CD712D5C75D5FE67A70F2B082E35E /* ReadStreamOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91E2F7B3848D0D04683579E2C02486A /* ReadStreamOperation.swift */; };
+		F43536785D3B6EBE86158A80964FE0F4 /* StreamOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D59E1283AE253E479F019D73B53C1E /* StreamOperation.swift */; };
+		F50C6E7C7EEA3717AD807EFCAA821B82 /* XML.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8256435A68677874D22DCED0444E6FFF /* XML.swift */; };
+		F8392175B5ED9C70136B143654436E5F /* ResourceListOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2370075D06C714D231DE97611FB0A919 /* ResourceListOperation.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B5EBCF686991910B7EA508410E9F6E7E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0B973B258006836BBF8AA10AA35DD374;
+			remoteInfo = SwiftyXML;
+		};
+		EA58D04CD6DB5FD17F5BAC3ECF7023E8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F5C643E5E03C70E9E74AD815942806CE;
+			remoteInfo = rebekka;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		14D59E1283AE253E479F019D73B53C1E /* StreamOperation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StreamOperation.swift; path = "rebekka-source/Rebekka/StreamOperation.swift"; sourceTree = "<group>"; };
+		15991E1934E2F08B3FE933F1D41CBED7 /* Operation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Operation.swift; path = "rebekka-source/Rebekka/Operation.swift"; sourceTree = "<group>"; };
+		19F5DA7172435F06B19FC51357D31424 /* DirectoryCreationOperation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DirectoryCreationOperation.swift; path = "rebekka-source/Rebekka/DirectoryCreationOperation.swift"; sourceTree = "<group>"; };
+		1C8C6F7BF8B8C4F562FCFCC6643249C4 /* Pods-SparkleAutoUpdater-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SparkleAutoUpdater-dummy.m"; sourceTree = "<group>"; };
+		2143E75EC3D2CA37B562B1608EBAA8B0 /* Pods-SparkleAutoUpdater-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SparkleAutoUpdater-umbrella.h"; sourceTree = "<group>"; };
+		2370075D06C714D231DE97611FB0A919 /* ResourceListOperation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResourceListOperation.swift; path = "rebekka-source/Rebekka/ResourceListOperation.swift"; sourceTree = "<group>"; };
+		270DD1219F1E6CF00379D39F252D87C6 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		284F2677FC99409872F99BD2D90DA9B3 /* rebekka.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = rebekka.modulemap; sourceTree = "<group>"; };
+		2EA51DDF911962C44208275A1B62E5A0 /* Pods-SparkleAutoUpdater-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SparkleAutoUpdater-frameworks.sh"; sourceTree = "<group>"; };
+		34991C73F77F07468CB509D79C3682C8 /* SwiftyXML-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyXML-umbrella.h"; sourceTree = "<group>"; };
+		4D8494204DB0435056FE277228C0264E /* SwiftyXML.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyXML.xcconfig; sourceTree = "<group>"; };
+		5810844706DC5E69326D5B2F315F5CC6 /* Pods-SparkleAutoUpdater.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SparkleAutoUpdater.debug.xcconfig"; sourceTree = "<group>"; };
+		613119DFA68955B0DFECE218807531AA /* SwiftyXML-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyXML-dummy.m"; sourceTree = "<group>"; };
+		61F7B37F1ADFC0A1C8C6AF2DE0978FFF /* Session.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Session.swift; path = "rebekka-source/Rebekka/Session.swift"; sourceTree = "<group>"; };
+		67F4BC7E408B564E6378E773EE71E09C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7B992755B81D96936602B4BA6250D57A /* rebekka-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "rebekka-prefix.pch"; sourceTree = "<group>"; };
+		7CD04B309D538FDD073F6B4692C4F736 /* Pods-SparkleAutoUpdater-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SparkleAutoUpdater-resources.sh"; sourceTree = "<group>"; };
+		7D41E11F96B450CFD801FB9E42A25388 /* Pods-SparkleAutoUpdater.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-SparkleAutoUpdater.modulemap"; sourceTree = "<group>"; };
+		8256435A68677874D22DCED0444E6FFF /* XML.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = XML.swift; path = Source/XML.swift; sourceTree = "<group>"; };
+		8CED0F04DC6F938E867BB3CDC33F4B16 /* Pods_SparkleAutoUpdater.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SparkleAutoUpdater.framework; path = "Pods-SparkleAutoUpdater.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9008D58DA7FA2E4F46F8979B633DDA69 /* Pods-SparkleAutoUpdater.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SparkleAutoUpdater.release.xcconfig"; sourceTree = "<group>"; };
+		907816DF4793F6471173FB7F6EBCD4ED /* rebekka.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = rebekka.framework; path = rebekka.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93D8465D2B21AA0CBE7BA87144AA17D2 /* Pods-SparkleAutoUpdater-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SparkleAutoUpdater-acknowledgements.markdown"; sourceTree = "<group>"; };
+		B3C06C36311E0D8333723BABFBC1CBA3 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B8B90E0CE5B6FDFDB60CC4ED16331321 /* SwiftyXML-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyXML-prefix.pch"; sourceTree = "<group>"; };
+		B8C7464EF37BB9D32ED5F734A9DFD6D5 /* rebekka.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = rebekka.xcconfig; sourceTree = "<group>"; };
+		BD93F991CCF1AC915417E85799EC0AC8 /* WriteStreamOperation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WriteStreamOperation.swift; path = "rebekka-source/Rebekka/WriteStreamOperation.swift"; sourceTree = "<group>"; };
+		C1F4BFEE7165F39FE2F2C5F8E961148A /* Pods-SparkleAutoUpdater-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SparkleAutoUpdater-acknowledgements.plist"; sourceTree = "<group>"; };
+		C2A94748D7FC6A000DDD0F219755308E /* FileDownloadOperation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FileDownloadOperation.swift; path = "rebekka-source/Rebekka/FileDownloadOperation.swift"; sourceTree = "<group>"; };
+		C4068EE96C915682FDAA8CCB5D055BBA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C9E4788E9028FE9C4D63E37D6977C9B2 /* rebekka-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "rebekka-dummy.m"; sourceTree = "<group>"; };
+		E91E2F7B3848D0D04683579E2C02486A /* ReadStreamOperation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReadStreamOperation.swift; path = "rebekka-source/Rebekka/ReadStreamOperation.swift"; sourceTree = "<group>"; };
+		EDE5472D43BD1020C2988DD63998EB6D /* SwiftyXML.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftyXML.framework; path = SwiftyXML.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EED6D568CC523FCD735FDCEA07417399 /* SwiftyXML.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SwiftyXML.modulemap; sourceTree = "<group>"; };
+		F0851E8D74C836CC5E00C92009FD1C73 /* FileUploadOperation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FileUploadOperation.swift; path = "rebekka-source/Rebekka/FileUploadOperation.swift"; sourceTree = "<group>"; };
+		F1EBCD7DD00100EE267112DA1FE5C8ED /* rebekka-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "rebekka-umbrella.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		05E8C1BB8BFC22286733DFB7BFF50B03 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49D05EC2215544E732335083C48A4836 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1A3D09E18508FF61406797E9089274B6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D5A83381402E2AB679CBCC529564871E /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3457FAC157F17FD9A2D395EC15462F57 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E58DE053181D456B89F8036176B8387 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		04C068A18C5413F804A2959126093416 /* OS X */ = {
+			isa = PBXGroup;
+			children = (
+				270DD1219F1E6CF00379D39F252D87C6 /* Cocoa.framework */,
+			);
+			name = "OS X";
+			sourceTree = "<group>";
+		};
+		39E9EE8210D861DFD82346C1F5EB7218 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				04C068A18C5413F804A2959126093416 /* OS X */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3FB3B19F967E835E093D8290336D4364 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				65949A180A8FE51CF45D8E1C287AB0A9 /* Pods-SparkleAutoUpdater */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		60610049FCB7EC62C12ABDE0C095FB2D /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C4068EE96C915682FDAA8CCB5D055BBA /* Info.plist */,
+				EED6D568CC523FCD735FDCEA07417399 /* SwiftyXML.modulemap */,
+				4D8494204DB0435056FE277228C0264E /* SwiftyXML.xcconfig */,
+				613119DFA68955B0DFECE218807531AA /* SwiftyXML-dummy.m */,
+				B8B90E0CE5B6FDFDB60CC4ED16331321 /* SwiftyXML-prefix.pch */,
+				34991C73F77F07468CB509D79C3682C8 /* SwiftyXML-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SwiftyXML";
+			sourceTree = "<group>";
+		};
+		65949A180A8FE51CF45D8E1C287AB0A9 /* Pods-SparkleAutoUpdater */ = {
+			isa = PBXGroup;
+			children = (
+				B3C06C36311E0D8333723BABFBC1CBA3 /* Info.plist */,
+				7D41E11F96B450CFD801FB9E42A25388 /* Pods-SparkleAutoUpdater.modulemap */,
+				93D8465D2B21AA0CBE7BA87144AA17D2 /* Pods-SparkleAutoUpdater-acknowledgements.markdown */,
+				C1F4BFEE7165F39FE2F2C5F8E961148A /* Pods-SparkleAutoUpdater-acknowledgements.plist */,
+				1C8C6F7BF8B8C4F562FCFCC6643249C4 /* Pods-SparkleAutoUpdater-dummy.m */,
+				2EA51DDF911962C44208275A1B62E5A0 /* Pods-SparkleAutoUpdater-frameworks.sh */,
+				7CD04B309D538FDD073F6B4692C4F736 /* Pods-SparkleAutoUpdater-resources.sh */,
+				2143E75EC3D2CA37B562B1608EBAA8B0 /* Pods-SparkleAutoUpdater-umbrella.h */,
+				5810844706DC5E69326D5B2F315F5CC6 /* Pods-SparkleAutoUpdater.debug.xcconfig */,
+				9008D58DA7FA2E4F46F8979B633DDA69 /* Pods-SparkleAutoUpdater.release.xcconfig */,
+			);
+			name = "Pods-SparkleAutoUpdater";
+			path = "Target Support Files/Pods-SparkleAutoUpdater";
+			sourceTree = "<group>";
+		};
+		7697A2B852E90FC34F470839855B589E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D3FF781665374253081913DEA88012FE /* rebekka */,
+				D0521388F646C4B8E7713F524473AD1C /* SwiftyXML */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7C964D6A70B696C265DD3CC25255603A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8CED0F04DC6F938E867BB3CDC33F4B16 /* Pods_SparkleAutoUpdater.framework */,
+				907816DF4793F6471173FB7F6EBCD4ED /* rebekka.framework */,
+				EDE5472D43BD1020C2988DD63998EB6D /* SwiftyXML.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				39E9EE8210D861DFD82346C1F5EB7218 /* Frameworks */,
+				7697A2B852E90FC34F470839855B589E /* Pods */,
+				7C964D6A70B696C265DD3CC25255603A /* Products */,
+				3FB3B19F967E835E093D8290336D4364 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		C1AE748B71C1C95A6CE45B26732248DC /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				67F4BC7E408B564E6378E773EE71E09C /* Info.plist */,
+				284F2677FC99409872F99BD2D90DA9B3 /* rebekka.modulemap */,
+				B8C7464EF37BB9D32ED5F734A9DFD6D5 /* rebekka.xcconfig */,
+				C9E4788E9028FE9C4D63E37D6977C9B2 /* rebekka-dummy.m */,
+				7B992755B81D96936602B4BA6250D57A /* rebekka-prefix.pch */,
+				F1EBCD7DD00100EE267112DA1FE5C8ED /* rebekka-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/rebekka";
+			sourceTree = "<group>";
+		};
+		D0521388F646C4B8E7713F524473AD1C /* SwiftyXML */ = {
+			isa = PBXGroup;
+			children = (
+				8256435A68677874D22DCED0444E6FFF /* XML.swift */,
+				60610049FCB7EC62C12ABDE0C095FB2D /* Support Files */,
+			);
+			name = SwiftyXML;
+			path = SwiftyXML;
+			sourceTree = "<group>";
+		};
+		D3FF781665374253081913DEA88012FE /* rebekka */ = {
+			isa = PBXGroup;
+			children = (
+				19F5DA7172435F06B19FC51357D31424 /* DirectoryCreationOperation.swift */,
+				C2A94748D7FC6A000DDD0F219755308E /* FileDownloadOperation.swift */,
+				F0851E8D74C836CC5E00C92009FD1C73 /* FileUploadOperation.swift */,
+				15991E1934E2F08B3FE933F1D41CBED7 /* Operation.swift */,
+				E91E2F7B3848D0D04683579E2C02486A /* ReadStreamOperation.swift */,
+				2370075D06C714D231DE97611FB0A919 /* ResourceListOperation.swift */,
+				61F7B37F1ADFC0A1C8C6AF2DE0978FFF /* Session.swift */,
+				14D59E1283AE253E479F019D73B53C1E /* StreamOperation.swift */,
+				BD93F991CCF1AC915417E85799EC0AC8 /* WriteStreamOperation.swift */,
+				C1AE748B71C1C95A6CE45B26732248DC /* Support Files */,
+			);
+			name = rebekka;
+			path = rebekka;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		007C90B4F575365E316E694C1A3B5DA1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8ED92CA4D6F38DE1E4BC315C58322763 /* Pods-SparkleAutoUpdater-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45C53A8F88F5E71AE1897A5BC2500374 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6AA8471795EAA6D1C09F7ECD5D70957F /* SwiftyXML-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B71CBD129A3B58B6395727631129ECDD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44884F49D8CF9C48C4A8565833F9B4AD /* rebekka-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0B973B258006836BBF8AA10AA35DD374 /* SwiftyXML */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 44AECB2D05B1D304364DAFEBE8229573 /* Build configuration list for PBXNativeTarget "SwiftyXML" */;
+			buildPhases = (
+				5E677F8F3DEBF9D444874C431AAE6A0E /* Sources */,
+				1A3D09E18508FF61406797E9089274B6 /* Frameworks */,
+				45C53A8F88F5E71AE1897A5BC2500374 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftyXML;
+			productName = SwiftyXML;
+			productReference = EDE5472D43BD1020C2988DD63998EB6D /* SwiftyXML.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		3CA2D6515095A5935516B29F2CA4F061 /* Pods-SparkleAutoUpdater */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5685EC8309BBF5A943612EB687EAC71D /* Build configuration list for PBXNativeTarget "Pods-SparkleAutoUpdater" */;
+			buildPhases = (
+				7774296F2EAB115F09FB99605CF0AC78 /* Sources */,
+				05E8C1BB8BFC22286733DFB7BFF50B03 /* Frameworks */,
+				007C90B4F575365E316E694C1A3B5DA1 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3026264D9F31B80BE63096152155E869 /* PBXTargetDependency */,
+				DF2A49C834B12DDE334A433D5049B965 /* PBXTargetDependency */,
+			);
+			name = "Pods-SparkleAutoUpdater";
+			productName = "Pods-SparkleAutoUpdater";
+			productReference = 8CED0F04DC6F938E867BB3CDC33F4B16 /* Pods_SparkleAutoUpdater.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F5C643E5E03C70E9E74AD815942806CE /* rebekka */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1A4B485A7664D1CBC99822DCBDD3C57E /* Build configuration list for PBXNativeTarget "rebekka" */;
+			buildPhases = (
+				430FD2FA1D228934ACB346D5BC79DCC1 /* Sources */,
+				3457FAC157F17FD9A2D395EC15462F57 /* Frameworks */,
+				B71CBD129A3B58B6395727631129ECDD /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = rebekka;
+			productName = rebekka;
+			productReference = 907816DF4793F6471173FB7F6EBCD4ED /* rebekka.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 7C964D6A70B696C265DD3CC25255603A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3CA2D6515095A5935516B29F2CA4F061 /* Pods-SparkleAutoUpdater */,
+				F5C643E5E03C70E9E74AD815942806CE /* rebekka */,
+				0B973B258006836BBF8AA10AA35DD374 /* SwiftyXML */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		430FD2FA1D228934ACB346D5BC79DCC1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A52F24F177EABDCBCC0F132346331F1C /* DirectoryCreationOperation.swift in Sources */,
+				D1C10399EEE5DBCFF4C4E20CCEF88C3E /* FileDownloadOperation.swift in Sources */,
+				12433A837C218AE8AF2BCA9716A0442D /* FileUploadOperation.swift in Sources */,
+				A5D2A3D3742D904F7A4EA08A3EA015E8 /* Operation.swift in Sources */,
+				D94CD712D5C75D5FE67A70F2B082E35E /* ReadStreamOperation.swift in Sources */,
+				2CB63B7B6C8182ACBB58FF9067EDBD8E /* rebekka-dummy.m in Sources */,
+				F8392175B5ED9C70136B143654436E5F /* ResourceListOperation.swift in Sources */,
+				9A58E8B65A65FC2D272469DBB1BA87D6 /* Session.swift in Sources */,
+				F43536785D3B6EBE86158A80964FE0F4 /* StreamOperation.swift in Sources */,
+				C31E86667907B33BD3152581D5A2CA2E /* WriteStreamOperation.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5E677F8F3DEBF9D444874C431AAE6A0E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CECCEE76A7FE8EDCBF50025C9B9AF52 /* SwiftyXML-dummy.m in Sources */,
+				F50C6E7C7EEA3717AD807EFCAA821B82 /* XML.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7774296F2EAB115F09FB99605CF0AC78 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				836159709E7699732DC759615254C3B9 /* Pods-SparkleAutoUpdater-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3026264D9F31B80BE63096152155E869 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftyXML;
+			target = 0B973B258006836BBF8AA10AA35DD374 /* SwiftyXML */;
+			targetProxy = B5EBCF686991910B7EA508410E9F6E7E /* PBXContainerItemProxy */;
+		};
+		DF2A49C834B12DDE334A433D5049B965 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = rebekka;
+			target = F5C643E5E03C70E9E74AD815942806CE /* rebekka */;
+			targetProxy = EA58D04CD6DB5FD17F5BAC3ECF7023E8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		2E9690CE9DF2B07AF918C94575466E41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9008D58DA7FA2E4F46F8979B633DDA69 /* Pods-SparkleAutoUpdater.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-SparkleAutoUpdater/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MODULEMAP_FILE = "Target Support Files/Pods-SparkleAutoUpdater/Pods-SparkleAutoUpdater.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_SparkleAutoUpdater;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		337AD37B27D7FFADF01DD8D7FE35B27B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		45167724C4D16D8CBA42EBF2374C65DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5810844706DC5E69326D5B2F315F5CC6 /* Pods-SparkleAutoUpdater.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-SparkleAutoUpdater/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MODULEMAP_FILE = "Target Support Files/Pods-SparkleAutoUpdater/Pods-SparkleAutoUpdater.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_SparkleAutoUpdater;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		6D7B1479C94D6D1195B685988A01CA6F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B8C7464EF37BB9D32ED5F734A9DFD6D5 /* rebekka.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/rebekka/rebekka-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/rebekka/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MODULEMAP_FILE = "Target Support Files/rebekka/rebekka.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = rebekka;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B10618970C1FA4D546277C1CA4CC4FE6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B8C7464EF37BB9D32ED5F734A9DFD6D5 /* rebekka.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/rebekka/rebekka-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/rebekka/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MODULEMAP_FILE = "Target Support Files/rebekka/rebekka.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = rebekka;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C66D88DD8677287BCA7987CA1694EB1E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D8494204DB0435056FE277228C0264E /* SwiftyXML.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyXML/SwiftyXML-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyXML/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MODULEMAP_FILE = "Target Support Files/SwiftyXML/SwiftyXML.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SwiftyXML;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		DFD12C688A387FAB9D48A8BE549973DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D8494204DB0435056FE277228C0264E /* SwiftyXML.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyXML/SwiftyXML-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyXML/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MODULEMAP_FILE = "Target Support Files/SwiftyXML/SwiftyXML.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SwiftyXML;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		FC4738C3605827B2CD972C349A860865 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1A4B485A7664D1CBC99822DCBDD3C57E /* Build configuration list for PBXNativeTarget "rebekka" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B10618970C1FA4D546277C1CA4CC4FE6 /* Debug */,
+				6D7B1479C94D6D1195B685988A01CA6F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				337AD37B27D7FFADF01DD8D7FE35B27B /* Debug */,
+				FC4738C3605827B2CD972C349A860865 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		44AECB2D05B1D304364DAFEBE8229573 /* Build configuration list for PBXNativeTarget "SwiftyXML" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C66D88DD8677287BCA7987CA1694EB1E /* Debug */,
+				DFD12C688A387FAB9D48A8BE549973DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5685EC8309BBF5A943612EB687EAC71D /* Build configuration list for PBXNativeTarget "Pods-SparkleAutoUpdater" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				45167724C4D16D8CBA42EBF2374C65DF /* Debug */,
+				2E9690CE9DF2B07AF918C94575466E41 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

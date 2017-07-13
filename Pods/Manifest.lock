@@ -1,0 +1,15 @@
+PODS:
+  - rebekka (1.0.3)
+  - SwiftyXML (1.4.0)
+
+DEPENDENCIES:
+  - rebekka
+  - SwiftyXML
+
+SPEC CHECKSUMS:
+  rebekka: 456c2c3d1013faad49530845cae2cf9de8559ffb
+  SwiftyXML: 46906ae6975720b9bffc7c534350eaebe16821ed
+
+PODFILE CHECKSUM: 9e01378cd15ccaf8875ab9d58e97591806aaa054
+
+COCOAPODS: 1.2.1
