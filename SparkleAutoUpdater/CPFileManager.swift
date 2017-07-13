@@ -55,7 +55,10 @@ final class CPFileManager {
             let newBundleVersionString = "\(bundleVersionString + 0.1)"
             
             let task = Process()
-            task.launch(withArguments: ["write", infoPlistURL.deletingPathExtension().lastPathComponent, "CFBundleVersion", newBundleVersionString, "CFBundleShortVersionString", newDisplayVersionString],
+            task.launch(withArguments: ["write", infoPlistURL.deletingPathExtension().lastPathComponent, "CFBundleVersion", newBundleVersionString],
+                        currentDirectoryPath: infoPlistURL.deletingLastPathComponent().path,
+                        launchPath: "/usr/bin/defaults")
+            task.launch(withArguments: ["write", infoPlistURL.deletingPathExtension().lastPathComponent, "CFBundleShortVersionString", newDisplayVersionString],
                         currentDirectoryPath: infoPlistURL.deletingLastPathComponent().path,
                         launchPath: "/usr/bin/defaults")
             
