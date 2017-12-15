@@ -10,12 +10,10 @@
 		3E07EE441F0DAB94006ED43F /* CPXMLManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E07EE431F0DAB94006ED43F /* CPXMLManager.swift */; };
 		3E07EE511F0DBF00006ED43F /* libxml2.2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E07EE501F0DBEF2006ED43F /* libxml2.2.tbd */; };
 		3E07EE521F0DBF00006ED43F /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E07EE4F1F0DBEF2006ED43F /* libxml2.tbd */; };
-		3E92DABC1F0B15F900D98D7B /* generate_keys in Resources */ = {isa = PBXBuildFile; fileRef = 3E92DAB61F0B15F900D98D7B /* generate_keys */; };
-		3E92DABD1F0B15F900D98D7B /* BinaryDelta in Resources */ = {isa = PBXBuildFile; fileRef = 3E92DAB71F0B15F900D98D7B /* BinaryDelta */; };
-		3E92DABE1F0B15F900D98D7B /* generate_appcast in Resources */ = {isa = PBXBuildFile; fileRef = 3E92DAB81F0B15F900D98D7B /* generate_appcast */; };
-		3E92DABF1F0B15F900D98D7B /* sign_update in Resources */ = {isa = PBXBuildFile; fileRef = 3E92DAB91F0B15F900D98D7B /* sign_update */; };
-		3E92DAC01F0B15F900D98D7B /* BinaryDelta.dSYM in Resources */ = {isa = PBXBuildFile; fileRef = 3E92DABA1F0B15F900D98D7B /* BinaryDelta.dSYM */; };
-		3E92DAC11F0B15F900D98D7B /* generate_appcast.dSYM in Resources */ = {isa = PBXBuildFile; fileRef = 3E92DABB1F0B15F900D98D7B /* generate_appcast.dSYM */; };
+		3E4AA0041FE2B39500BE6EF0 /* BinaryDelta in Resources */ = {isa = PBXBuildFile; fileRef = 3E4AA0031FE2B39500BE6EF0 /* BinaryDelta */; };
+		3E4AA0071FE2B3A200BE6EF0 /* generate_keys in Resources */ = {isa = PBXBuildFile; fileRef = 3E4AA0051FE2B3A200BE6EF0 /* generate_keys */; };
+		3E4AA0081FE2B3A200BE6EF0 /* generate_appcast in Resources */ = {isa = PBXBuildFile; fileRef = 3E4AA0061FE2B3A200BE6EF0 /* generate_appcast */; };
+		3E4AA00A1FE2B3A800BE6EF0 /* sign_update in Resources */ = {isa = PBXBuildFile; fileRef = 3E4AA0091FE2B3A800BE6EF0 /* sign_update */; };
 		3E92DAD81F0B24AD00D98D7B /* CPFTPManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E92DAD71F0B24AD00D98D7B /* CPFTPManager.swift */; };
 		3ED6BADF1F099AEA0008993A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED6BADE1F099AEA0008993A /* AppDelegate.swift */; };
 		3ED6BAE11F099AEA0008993A /* CPMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED6BAE01F099AEA0008993A /* CPMainViewController.swift */; };
@@ -31,12 +29,10 @@
 		3E07EE431F0DAB94006ED43F /* CPXMLManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPXMLManager.swift; sourceTree = "<group>"; };
 		3E07EE4F1F0DBEF2006ED43F /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
 		3E07EE501F0DBEF2006ED43F /* libxml2.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.2.tbd; path = usr/lib/libxml2.2.tbd; sourceTree = SDKROOT; };
-		3E92DAB61F0B15F900D98D7B /* generate_keys */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = generate_keys; path = "../../../Downloads/Sparkle-1.17.0/bin/generate_keys"; sourceTree = "<group>"; };
-		3E92DAB71F0B15F900D98D7B /* BinaryDelta */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = BinaryDelta; path = "../../../Downloads/Sparkle-1.17.0/bin/BinaryDelta"; sourceTree = "<group>"; };
-		3E92DAB81F0B15F900D98D7B /* generate_appcast */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = generate_appcast; path = "../../../Downloads/Sparkle-1.17.0/bin/generate_appcast"; sourceTree = "<group>"; };
-		3E92DAB91F0B15F900D98D7B /* sign_update */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = sign_update; path = "../../../Downloads/Sparkle-1.17.0/bin/sign_update"; sourceTree = "<group>"; };
-		3E92DABA1F0B15F900D98D7B /* BinaryDelta.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = BinaryDelta.dSYM; path = "../../../Downloads/Sparkle-1.17.0/bin/BinaryDelta.dSYM"; sourceTree = "<group>"; };
-		3E92DABB1F0B15F900D98D7B /* generate_appcast.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = generate_appcast.dSYM; path = "../../../Downloads/Sparkle-1.17.0/bin/generate_appcast.dSYM"; sourceTree = "<group>"; };
+		3E4AA0031FE2B39500BE6EF0 /* BinaryDelta */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = BinaryDelta; sourceTree = "<group>"; };
+		3E4AA0051FE2B3A200BE6EF0 /* generate_keys */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = generate_keys; sourceTree = "<group>"; };
+		3E4AA0061FE2B3A200BE6EF0 /* generate_appcast */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = generate_appcast; sourceTree = "<group>"; };
+		3E4AA0091FE2B3A800BE6EF0 /* sign_update */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = sign_update; sourceTree = "<group>"; };
 		3E92DACE1F0B21FA00D98D7B /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		3E92DACF1F0B220600D98D7B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3E92DAD71F0B24AD00D98D7B /* CPFTPManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPFTPManager.swift; sourceTree = "<group>"; };
@@ -72,12 +68,10 @@
 		3E92DAB51F0B15E500D98D7B /* Sparkle Key Generator */ = {
 			isa = PBXGroup;
 			children = (
-				3E92DAB71F0B15F900D98D7B /* BinaryDelta */,
-				3E92DABA1F0B15F900D98D7B /* BinaryDelta.dSYM */,
-				3E92DAB81F0B15F900D98D7B /* generate_appcast */,
-				3E92DABB1F0B15F900D98D7B /* generate_appcast.dSYM */,
-				3E92DAB61F0B15F900D98D7B /* generate_keys */,
-				3E92DAB91F0B15F900D98D7B /* sign_update */,
+				3E4AA0031FE2B39500BE6EF0 /* BinaryDelta */,
+				3E4AA0061FE2B3A200BE6EF0 /* generate_appcast */,
+				3E4AA0051FE2B3A200BE6EF0 /* generate_keys */,
+				3E4AA0091FE2B3A800BE6EF0 /* sign_update */,
 			);
 			name = "Sparkle Key Generator";
 			sourceTree = "<group>";
@@ -215,14 +209,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3E92DABF1F0B15F900D98D7B /* sign_update in Resources */,
-				3E92DAC01F0B15F900D98D7B /* BinaryDelta.dSYM in Resources */,
+				3E4AA0071FE2B3A200BE6EF0 /* generate_keys in Resources */,
+				3E4AA0081FE2B3A200BE6EF0 /* generate_appcast in Resources */,
 				3ED6BAE31F099AEA0008993A /* Assets.xcassets in Resources */,
 				3ED6BAE61F099AEA0008993A /* CPMainWindow.storyboard in Resources */,
-				3E92DABE1F0B15F900D98D7B /* generate_appcast in Resources */,
-				3E92DABD1F0B15F900D98D7B /* BinaryDelta in Resources */,
-				3E92DAC11F0B15F900D98D7B /* generate_appcast.dSYM in Resources */,
-				3E92DABC1F0B15F900D98D7B /* generate_keys in Resources */,
+				3E4AA00A1FE2B3A800BE6EF0 /* sign_update in Resources */,
+				3E4AA0041FE2B39500BE6EF0 /* BinaryDelta in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
