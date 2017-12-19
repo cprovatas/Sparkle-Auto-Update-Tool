@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="13122.19" systemVersion="16F73" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13122.19"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13529"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -219,6 +219,9 @@
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
                         <value key="minSize" type="size" width="600" height="600"/>
                         <value key="maxSize" type="size" width="600" height="600"/>
+                        <connections>
+                            <outlet property="delegate" destination="B8D-0N-5wS" id="oXD-t1-uh2"/>
+                        </connections>
                     </window>
                     <connections>
                         <segue destination="XfG-lQ-9wD" kind="relationship" relationship="window.shadowedContentViewController" id="cq2-FE-JQM"/>
@@ -360,7 +363,7 @@
                                 <subviews>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="OGu-04-TUi">
                                         <rect key="frame" x="-8" y="18" width="295" height="17"/>
-                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="FTP Path to Updates Folder" id="3eC-SV-9b9">
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="SFTP Path to Updates Folder" id="3eC-SV-9b9">
                                             <font key="font" metaFont="system"/>
                                             <color key="textColor" red="0.18895059680000001" green="0.18895059680000001" blue="0.18895059680000001" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="displayP3"/>
                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -420,7 +423,7 @@
                                 <subviews>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="7DM-vH-XOi">
                                         <rect key="frame" x="-8" y="18" width="295" height="17"/>
-                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="FTP Username" id="j1A-4y-PhL">
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="SFTP Username" id="j1A-4y-PhL">
                                             <font key="font" metaFont="system"/>
                                             <color key="textColor" red="0.18895059680000001" green="0.18895059680000001" blue="0.18895059680000001" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="displayP3"/>
                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -450,7 +453,7 @@
                                 <subviews>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="aRk-Vz-Nbu">
                                         <rect key="frame" x="-8" y="18" width="295" height="17"/>
-                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="FTP Password" id="6eZ-Lo-qOn">
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="SFTP Password" id="6eZ-Lo-qOn">
                                             <font key="font" metaFont="system"/>
                                             <color key="textColor" red="0.18895059680000001" green="0.18895059680000001" blue="0.18895059680000001" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="displayP3"/>
                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -620,12 +623,12 @@
                     <connections>
                         <outlet property="appPathTextField" destination="9ai-Q0-3Iw" id="zaq-sx-Uz3"/>
                         <outlet property="dsaPrivateKeyTextField" destination="Zaj-ij-cij" id="woH-9q-QaC"/>
-                        <outlet property="ftpPasswordTextField" destination="QR5-tP-YHX" id="jwG-lC-sI3"/>
-                        <outlet property="ftpUsernameTextField" destination="4OC-eR-6mf" id="Y5Q-IM-jhV"/>
                         <outlet property="pathToUpdatesTextField" destination="ngk-hi-dtD" id="3Nb-Em-3U8"/>
                         <outlet property="progressIndicator" destination="V9t-FH-4gH" id="WoW-v8-lOB"/>
                         <outlet property="progressTextField" destination="MYd-hO-Zkt" id="dnv-pv-xKA"/>
                         <outlet property="publicPathToUpdatesTextField" destination="lAZ-Ci-zKv" id="QkA-jQ-nse"/>
+                        <outlet property="sftpPasswordTextField" destination="QR5-tP-YHX" id="jwG-lC-sI3"/>
+                        <outlet property="sftpUsernameTextField" destination="4OC-eR-6mf" id="Y5Q-IM-jhV"/>
                         <outlet property="updateNotesTextView" destination="q9f-27-ZIY" id="Kn5-e9-c8n"/>
                     </connections>
                 </viewController>

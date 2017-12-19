@@ -18,8 +18,7 @@ public extension NSView {
     
     private func _presentAlert(_ message: String? = nil, retryButtonText: String? = nil, retryHandler: (() -> Void)? = nil) {
         if window == nil {
-            Swift.print("\(self.self) Error Function '\(#function)' Line: \(#line) No window found.")
-            return
+            return Swift.print("\(self.self) Error Function '\(#function)' Line: \(#line) No window found.")
         }
         
         let alert = NSAlert()
@@ -45,12 +44,21 @@ public extension NSView {
 }
 
 public extension Process {
-    public func launch(withArguments args: [String], currentDirectoryPath: String, launchPath: String) {
+    public func launch(withArguments args: [String], currentDirectoryPath: String? = nil, launchPath: String) {
         arguments = args
-        self.currentDirectoryPath = currentDirectoryPath
+        if let currentDirectoryPath = currentDirectoryPath {
+            self.currentDirectoryPath = currentDirectoryPath
+        }
         self.launchPath = launchPath
         launch()
         waitUntilExit()
+    }
+}
+
+extension URL {
+    public var escapingSpaces: URL {
+        let aPath = path.replacingOccurrences(of: " ", with: "\\ ")
+        return URL(fileURLWithPath: aPath)
     }
 }
 

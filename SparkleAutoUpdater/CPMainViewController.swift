@@ -20,8 +20,8 @@ final class CPMainViewController : NSViewController {
     @IBOutlet private weak var dsaPrivateKeyTextField: CPCodingTextField!
     @IBOutlet private weak var pathToUpdatesTextField: CPCodingTextField!
     @IBOutlet private weak var publicPathToUpdatesTextField: CPCodingTextField!
-    @IBOutlet private weak var ftpUsernameTextField: CPCodingTextField!
-    @IBOutlet private weak var ftpPasswordTextField: CPCodingSecureTextField!
+    @IBOutlet private weak var sftpUsernameTextField: CPCodingTextField!
+    @IBOutlet private weak var sftpPasswordTextField: CPCodingSecureTextField!
     @IBOutlet private var updateNotesTextView: CPCodingTextView!
     /// is set only when it is clicked
     private var updateButton : NSButton? = nil
@@ -34,8 +34,7 @@ final class CPMainViewController : NSViewController {
         openPanel.beginSheetModal(for: view.window!) { (response) in
             
             guard response == .OK, let urlString = openPanel.url?.path else {
-                Swift.print("\(self.self) Error Function: '\(#function)' Line \(#line).  Couldn't get url from open panel")
-                return
+                return Swift.print("\(self.self) Error Function: '\(#function)' Line \(#line).  Couldn't get url from open panel")
             }
             let textField = sender.tag == .appPathTextFieldTag ? self.appPathTextField : self.dsaPrivateKeyTextField
             textField!.stringValue = urlString
@@ -52,35 +51,33 @@ final class CPMainViewController : NSViewController {
         }
     }
     
-    /// only fires completion if successful, wrapper for starting connection
-    private func startFTPConnection(_ completion: @escaping () -> Void) {
-        guard let ftpURL = URL(string: pathToUpdatesTextField.stringValue) else {
-            view.presentAlert("Invalid FTP URL");
-            return
-        }
-        CPFTPManager.shared.startConnection(withURL: ftpURL, username: self.ftpUsernameTextField.stringValue, password: self.ftpPasswordTextField.stringValue, { (result, error) in
-                if let error = error {
-                    self.fail(error.localizedDescription)
-                }else {
-                    completion()
-                }
-        })
-    }
-    
     /// only fires completion on success, wrapper for upload function
     private func uploadFile(atURL url: URL, _ completion: @escaping () -> Void) {
-        CPFTPManager.shared.uploadFile(atURL: url) { (success, error) in
-            if let success = success as? Bool, success == true {
-                completion()
-            }else if let error = error {
-                self.fail(error.localizedDescription)
+        guard let publicPathURL = URL(string: publicPathToUpdatesTextField.stringValue),
+            let host = publicPathURL.host,
+            let remoteURL = URL(string: pathToUpdatesTextField.stringValue) else {
+                return debugPrint("Unable to get host for url \(url)")
+        }
+        
+        CPSFTPManager.uploadFile(atFileURL: url,
+                                 toRemoteURL: remoteURL,
+                                 username: sftpUsernameTextField.stringValue,
+                                 password: sftpPasswordTextField.stringValue,
+                                 host: host) { (success, error) in
+            
+            if let success = success as? Bool, success {
+                return completion()
             }
+            if let error = error {
+                return self.fail(error.localizedDescription)
+            }
+            self.fail("File at url '\(url)' failed to upload 😭")
         }
     }
     
     /// only fires completion if successful, wrapper for download function
     private func downloadAppcast(_ completion: @escaping (URL) throws -> Void) {
-        CPFTPManager.shared.downloadAppCastFile({ (url, error) in
+        CPSFTPManager.downloadAppCastFile({ (url, error) in
             if let url = url as? URL {
                 do {
                     try completion(url)
@@ -105,13 +102,12 @@ final class CPMainViewController : NSViewController {
     private func executeProcess() {
         let appPath = appPathTextField.stringValue
         let dsaPath = dsaPrivateKeyTextField.stringValue
-        /// allow pasting again :/
         do {
-            
+
             guard let publicPathURL = URL(string: publicPathToUpdatesTextField.stringValue) else {
                 throw CPMainViewControllerError.invalidUpdatePath
             }
-            
+
             /// 1 - Input validation, if fields are empty etc...
             /// 2 - open .app and update version
             updateStatus("Updating version number...")
@@ -124,38 +120,33 @@ final class CPMainViewController : NSViewController {
             updateStatus("Fetching DSA Key...")
             CPFileManager.getSignature(forZipAtURL: zipURL, pathOfDSAKeyFile: dsaPath, { (signature, error) in
                 if let error = error {
-                    self.fail(error.localizedDescription)
-                }else if let signature = signature {
-                    /// 6 - establish FTP connection
-                    /// fires only when successful
-                    self.updateStatus("Starting FTP Connection...")
-                    self.startFTPConnection {
-                        /// 7 - upload .zip
-                        self.updateStatus("Uploading Zip...")
-                        self.uploadFile(atURL: zipURL, {
-                            self.updateStatus("Downloading App Cast File and renaming...")
-                            /// 8 - download .appcast and rename to .xml
-                            self.downloadAppcast({ (url) in
-                                /// 9 edit app cast
-                                self.updateStatus("Updating App Cast File...")
-                                let notes = self.updateNotesTextView.string
-                                
-                                let zipURL = publicPathURL.appendingPathComponent(zipURL.lastPathComponent)
-                                try CPXMLManager.editUpdateNotes(forXMLFileatURL: url, versionSet: versionSet, publicZipURL: zipURL, dsaSignature: signature, updateNotes: notes)
-                                let appCastName = CPFTPManager.shared.firstXMLFileName
-                                let renamedURL = try CPFileManager.rename(fileAtURL: url, toFileName: appCastName!)
-                                
-                                self.updateStatus("Uploading App Cast File...")
-                                CPFTPManager.shared.uploadFile(atURL: renamedURL, { (result, error) in
-                                    self.finish()
-                                })
-                            })
+                   return self.fail(error.localizedDescription)
+                }
+                if let signature = signature {
+                    /// 7 - upload .zip
+                    self.updateStatus("Uploading Zip...")
+                    self.uploadFile(atURL: zipURL, {
+                        self.updateStatus("Downloading App Cast File and renaming...")
+                        /// 8 - download .appcast and rename to .xml
+                        self.downloadAppcast({ (url) in
+                            /// 9 edit app cast
+                            self.updateStatus("Updating App Cast File...")
+                            let notes = self.updateNotesTextView.string
+
+                            let zipURL = publicPathURL.appendingPathComponent(zipURL.lastPathComponent)
+                            try CPXMLManager.editUpdateNotes(forXMLFileatURL: url, versionSet: versionSet, publicZipURL: zipURL, dsaSignature: signature, updateNotes: notes)
+                            //let appCastName = CPFTPManager.shared.firstXMLFileName
+                            let appCastName = "Testingitout.xml"
+                            let renamedURL = try CPFileManager.rename(fileAtURL: url, toFileName: appCastName)
+
+                            self.updateStatus("Uploading App Cast File...")
+                            self.uploadFile(atURL: renamedURL, { self.finish() })
                         })
-                    }
+                    })
                 }
             })
             
-        }catch let error {
+        } catch let error {
             view.presentAlert(error.localizedDescription)
         }
     }

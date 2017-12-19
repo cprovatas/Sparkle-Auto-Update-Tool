@@ -15,18 +15,15 @@ public enum CPFileManagerError : String, Error, LocalizedError {
     case plistInInvalidFormat = "Info.plist was not in a readable format."
     case bundleVersionNotFound = "Bundle Version was not found in Info.plist. Please create those keys in Xcode"
     case failureZippingFile = "Unknown Failure zipping File"
-    case failureLocatingExecutable = "Failed finding 'sign_update' within internal app bundle"
     case dsaKeyFileNotFound = "Couldn't find DSA Key File"
-    case errorGettingSignature = "Error getting signature from DSA File"
     case codeResourcesNotFound = "Failed to locate code resources file"
     case codeResourcesInvalidFormat = "Code resources is in an invalid format"
+    case errorFindingExecutable = "Error locating path of executable"
     
     public var errorDescription: String? {
         return rawValue
     }
 }
-
-public typealias CPFileManagerResult = (String?, Error?) -> Void
 
 /// tuple representing build version and display version
 public typealias CPFileManagerVersionSet = (String, String)
@@ -86,28 +83,6 @@ final class CPFileManager {
         return zippedURL
     }
     
-    private static var storedCompletion : CPFileManagerResult!
-    public class func getSignature(forZipAtURL url: URL, pathOfDSAKeyFile path: String, _ completion: @escaping CPFileManagerResult) {
-        
-        guard let binaryPath = Bundle.main.path(forResource: "sign_update", ofType: nil) else {
-            completion(nil, CPFileManagerError.failureLocatingExecutable)
-            return
-        }
-        
-        guard fm.fileExists(atPath: path) else {
-            completion(nil, CPFileManagerError.dsaKeyFileNotFound)
-            return
-        }
-        
-        storedCompletion = completion
-        let task = Process()
-        let pipe = Pipe()
-        task.standardOutput = pipe
-        NotificationCenter.default.addObserver(self, selector: #selector(readOutput(_:)), name: .NSFileHandleDataAvailable, object: pipe.fileHandleForReading)
-        pipe.fileHandleForReading.waitForDataInBackgroundAndNotify()
-        task.launch(withArguments: [url.lastPathComponent, path], currentDirectoryPath: url.deletingLastPathComponent().path, launchPath: binaryPath)
-    }
-    
     /// returns new url
     public class func rename(fileAtURL url: URL, toFileName name: String) throws -> URL {
         let lastComponent = (name as NSString).lastPathComponent
@@ -124,15 +99,16 @@ final class CPFileManager {
         }
     }
     
-    @objc private class func readOutput(_ notification: Notification) {
-        if let fileHandle = notification.object as? FileHandle {
-            if let result = String(data: fileHandle.availableData, encoding: .utf8) {
-                storedCompletion(result.replacingOccurrences(of: "\n", with: ""), nil)
-            }else {
-                storedCompletion(nil, CPFileManagerError.errorGettingSignature)
-            }
+    public class func getSignature(forZipAtURL url: URL, pathOfDSAKeyFile path: String, _ completion: @escaping CPProcessWrapperResult) {
+        
+        guard let binaryPath = Bundle.main.path(forResource: "sign_update", ofType: nil) else {
+            return completion(nil, CPFileManagerError.errorFindingExecutable)
         }
-        NotificationCenter.default.removeObserver(self, name: .NSFileHandleDataAvailable, object: nil)
+        guard fm.fileExists(atPath: path) else {
+            return completion(nil, CPFileManagerError.dsaKeyFileNotFound)
+        }
+        
+        CPProcessWrapper.launch(withLaunchPath: binaryPath, arguments: [url.lastPathComponent, path], currentDirectoryPath: url.deletingLastPathComponent().path, completion)
     }
     
     private class func plist(forURL url: URL) throws -> NSMutableDictionary {
