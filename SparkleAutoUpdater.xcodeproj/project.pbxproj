@@ -7,37 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3E1FEE131FE8B1F500073BDE /* SparkleAutoUpdater.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E1FEE111FE8B1F500073BDE /* SparkleAutoUpdater.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3E8003471FEDC8A800AF2BBE /* config.json in Resources */ = {isa = PBXBuildFile; fileRef = 3E8003461FEDC8A800AF2BBE /* config.json */; };
+		3E819FEC1FE8B3F400FD383F /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED6BAE01F099AEA0008993A /* main.swift */; };
+		3E819FED1FE8B3F900FD383F /* CPExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED6BAF51F09C0740008993A /* CPExtensions.swift */; };
+		3E819FEE1FE8B3F900FD383F /* CPFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED6BAF31F09BA460008993A /* CPFileManager.swift */; };
+		3E819FEF1FE8B3F900FD383F /* CPSFTPManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E92DAD71F0B24AD00D98D7B /* CPSFTPManager.swift */; };
+		3E819FF01FE8B3F900FD383F /* CPProcessWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4AA01D1FE479C700BE6EF0 /* CPProcessWrapper.swift */; };
+		3E819FF11FE8B3F900FD383F /* CPXMLManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E07EE431F0DAB94006ED43F /* CPXMLManager.swift */; };
+		3EB5752F1FE9D45E00AB5089 /* BinaryDelta in Resources */ = {isa = PBXBuildFile; fileRef = 3E4AA0031FE2B39500BE6EF0 /* BinaryDelta */; };
+		3EB575311FE9D45E00AB5089 /* generate_keys in Resources */ = {isa = PBXBuildFile; fileRef = 3E4AA0051FE2B3A200BE6EF0 /* generate_keys */; };
+		3EB575321FE9D45E00AB5089 /* sign_update in Resources */ = {isa = PBXBuildFile; fileRef = 3E4AA0091FE2B3A800BE6EF0 /* sign_update */; };
+		3EB575331FE9D45E00AB5089 /* sshpass in Resources */ = {isa = PBXBuildFile; fileRef = 3E4AA01B1FE4762200BE6EF0 /* sshpass */; };
+		EC2D9683CD574E2C49ED6CCF /* Pods_SparkleAutoUpdater.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06E63D7DC122DFBF324D3255 /* Pods_SparkleAutoUpdater.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		06E63D7DC122DFBF324D3255 /* Pods_SparkleAutoUpdater.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SparkleAutoUpdater.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E07EE431F0DAB94006ED43F /* CPXMLManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPXMLManager.swift; sourceTree = "<group>"; };
-		3E07EE4F1F0DBEF2006ED43F /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
-		3E07EE501F0DBEF2006ED43F /* libxml2.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.2.tbd; path = usr/lib/libxml2.2.tbd; sourceTree = SDKROOT; };
 		3E1FEE0F1FE8B1F500073BDE /* SparkleAutoUpdater.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SparkleAutoUpdater.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3E1FEE111FE8B1F500073BDE /* SparkleAutoUpdater.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SparkleAutoUpdater.h; sourceTree = "<group>"; };
-		3E1FEE121FE8B1F500073BDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3E4AA0031FE2B39500BE6EF0 /* BinaryDelta */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = BinaryDelta; sourceTree = "<group>"; };
 		3E4AA0051FE2B3A200BE6EF0 /* generate_keys */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = generate_keys; sourceTree = "<group>"; };
-		3E4AA0061FE2B3A200BE6EF0 /* generate_appcast */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = generate_appcast; sourceTree = "<group>"; };
 		3E4AA0091FE2B3A800BE6EF0 /* sign_update */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = sign_update; sourceTree = "<group>"; };
 		3E4AA01B1FE4762200BE6EF0 /* sshpass */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = sshpass; sourceTree = "<group>"; };
 		3E4AA01D1FE479C700BE6EF0 /* CPProcessWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPProcessWrapper.swift; sourceTree = "<group>"; };
+		3E8003461FEDC8A800AF2BBE /* config.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = config.json; sourceTree = "<group>"; };
+		3E81A00B1FE8B75D00FD383F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3E92DACE1F0B21FA00D98D7B /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		3E92DACF1F0B220600D98D7B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3E92DAD71F0B24AD00D98D7B /* CPSFTPManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPSFTPManager.swift; sourceTree = "<group>"; };
-		3ED6BADE1F099AEA0008993A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3ED6BAE01F099AEA0008993A /* CPMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPMainViewController.swift; sourceTree = "<group>"; };
-		3ED6BAE21F099AEA0008993A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		3ED6BAE51F099AEA0008993A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/CPMainWindow.storyboard; sourceTree = "<group>"; };
-		3ED6BAE71F099AEA0008993A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3ED6BAE81F099AEA0008993A /* SparkleAutoUpdater.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SparkleAutoUpdater.entitlements; sourceTree = "<group>"; };
-		3ED6BAF01F09B1AE0008993A /* NSTextField+UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSTextField+UserDefaults.swift"; sourceTree = "<group>"; };
+		3ED6BAE01F099AEA0008993A /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		3ED6BAF31F09BA460008993A /* CPFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPFileManager.swift; sourceTree = "<group>"; };
 		3ED6BAF51F09C0740008993A /* CPExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPExtensions.swift; sourceTree = "<group>"; };
-		5B06B17BF3BB182C2D95CB18 /* Pods_SparkleAutoUpdater.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SparkleAutoUpdater.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DD53ACD87B520367B50A4064 /* Pods-SparkleAutoUpdater.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SparkleAutoUpdater.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SparkleAutoUpdater/Pods-SparkleAutoUpdater.debug.xcconfig"; sourceTree = "<group>"; };
-		F57B682795F62AEA0EBD1A51 /* Pods-SparkleAutoUpdater.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SparkleAutoUpdater.release.xcconfig"; path = "Pods/Target Support Files/Pods-SparkleAutoUpdater/Pods-SparkleAutoUpdater.release.xcconfig"; sourceTree = "<group>"; };
+		9D8879414A12CE04C1F082FA /* Pods-SparkleAutoUpdater.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SparkleAutoUpdater.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-SparkleAutoUpdater/Pods-SparkleAutoUpdater.debug.xcconfig"; sourceTree = "<group>"; };
+		DEB26D397117467279353F3D /* Pods-SparkleAutoUpdater.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SparkleAutoUpdater.release.xcconfig"; path = "../Pods/Target Support Files/Pods-SparkleAutoUpdater/Pods-SparkleAutoUpdater.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,26 +47,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC2D9683CD574E2C49ED6CCF /* Pods_SparkleAutoUpdater.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3E1FEE101FE8B1F500073BDE /* SparkleAutoUpdater */ = {
+		0CB7AEC1E3F2BE3233DBC607 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				3E1FEE111FE8B1F500073BDE /* SparkleAutoUpdater.h */,
-				3E1FEE121FE8B1F500073BDE /* Info.plist */,
+				9D8879414A12CE04C1F082FA /* Pods-SparkleAutoUpdater.debug.xcconfig */,
+				DEB26D397117467279353F3D /* Pods-SparkleAutoUpdater.release.xcconfig */,
 			);
-			path = SparkleAutoUpdater;
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		3E92DAB51F0B15E500D98D7B /* Sparkle Key Generator */ = {
 			isa = PBXGroup;
 			children = (
 				3E4AA0031FE2B39500BE6EF0 /* BinaryDelta */,
-				3E4AA0061FE2B3A200BE6EF0 /* generate_appcast */,
 				3E4AA0051FE2B3A200BE6EF0 /* generate_keys */,
 				3E4AA0091FE2B3A800BE6EF0 /* sign_update */,
 				3E4AA01B1FE4762200BE6EF0 /* sshpass */,
@@ -75,11 +77,9 @@
 		3E92DACD1F0B21FA00D98D7B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3E07EE501F0DBEF2006ED43F /* libxml2.2.tbd */,
-				3E07EE4F1F0DBEF2006ED43F /* libxml2.tbd */,
 				3E92DACF1F0B220600D98D7B /* Foundation.framework */,
 				3E92DACE1F0B21FA00D98D7B /* CFNetwork.framework */,
-				5B06B17BF3BB182C2D95CB18 /* Pods_SparkleAutoUpdater.framework */,
+				06E63D7DC122DFBF324D3255 /* Pods_SparkleAutoUpdater.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -88,10 +88,9 @@
 			isa = PBXGroup;
 			children = (
 				3ED6BADD1F099AEA0008993A /* SparkleAutoUpdater */,
-				3E1FEE101FE8B1F500073BDE /* SparkleAutoUpdater */,
 				3ED6BADC1F099AEA0008993A /* Products */,
 				3E92DACD1F0B21FA00D98D7B /* Frameworks */,
-				AB99973AF2F08D8EC5FC7BB2 /* Pods */,
+				0CB7AEC1E3F2BE3233DBC607 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,14 +105,10 @@
 		3ED6BADD1F099AEA0008993A /* SparkleAutoUpdater */ = {
 			isa = PBXGroup;
 			children = (
-				3ED6BADE1F099AEA0008993A /* AppDelegate.swift */,
-				3ED6BAE01F099AEA0008993A /* CPMainViewController.swift */,
+				3ED6BAE01F099AEA0008993A /* main.swift */,
+				3E8003461FEDC8A800AF2BBE /* config.json */,
+				3E81A00B1FE8B75D00FD383F /* Info.plist */,
 				3ED6BAF21F09BA370008993A /* Utility */,
-				3ED6BAF01F09B1AE0008993A /* NSTextField+UserDefaults.swift */,
-				3ED6BAE21F099AEA0008993A /* Assets.xcassets */,
-				3ED6BAE41F099AEA0008993A /* CPMainWindow.storyboard */,
-				3ED6BAE71F099AEA0008993A /* Info.plist */,
-				3ED6BAE81F099AEA0008993A /* SparkleAutoUpdater.entitlements */,
 			);
 			path = SparkleAutoUpdater;
 			sourceTree = "<group>";
@@ -131,15 +126,6 @@
 			name = Utility;
 			sourceTree = "<group>";
 		};
-		AB99973AF2F08D8EC5FC7BB2 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				DD53ACD87B520367B50A4064 /* Pods-SparkleAutoUpdater.debug.xcconfig */,
-				F57B682795F62AEA0EBD1A51 /* Pods-SparkleAutoUpdater.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -147,7 +133,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3E1FEE131FE8B1F500073BDE /* SparkleAutoUpdater.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,10 +143,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3E1FEE141FE8B1F500073BDE /* Build configuration list for PBXNativeTarget "SparkleAutoUpdater" */;
 			buildPhases = (
+				5C4A53E54721C3C52904038A /* [CP] Check Pods Manifest.lock */,
 				3E1FEE0A1FE8B1F500073BDE /* Sources */,
 				3E1FEE0B1FE8B1F500073BDE /* Frameworks */,
 				3E1FEE0C1FE8B1F500073BDE /* Headers */,
 				3E1FEE0D1FE8B1F500073BDE /* Resources */,
+				4E1519D2C6C2B7E9F57EDA44 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -211,35 +198,72 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3EB5752F1FE9D45E00AB5089 /* BinaryDelta in Resources */,
+				3EB575331FE9D45E00AB5089 /* sshpass in Resources */,
+				3E8003471FEDC8A800AF2BBE /* config.json in Resources */,
+				3EB575321FE9D45E00AB5089 /* sign_update in Resources */,
+				3EB575311FE9D45E00AB5089 /* generate_keys in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4E1519D2C6C2B7E9F57EDA44 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-SparkleAutoUpdater/Pods-SparkleAutoUpdater-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5C4A53E54721C3C52904038A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SparkleAutoUpdater-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3E1FEE0A1FE8B1F500073BDE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E819FED1FE8B3F900FD383F /* CPExtensions.swift in Sources */,
+				3E819FEF1FE8B3F900FD383F /* CPSFTPManager.swift in Sources */,
+				3E819FF11FE8B3F900FD383F /* CPXMLManager.swift in Sources */,
+				3E819FEC1FE8B3F400FD383F /* main.swift in Sources */,
+				3E819FEE1FE8B3F900FD383F /* CPFileManager.swift in Sources */,
+				3E819FF01FE8B3F900FD383F /* CPProcessWrapper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXVariantGroup section */
-		3ED6BAE41F099AEA0008993A /* CPMainWindow.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3ED6BAE51F099AEA0008993A /* Base */,
-			);
-			name = CPMainWindow.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
 		3E1FEE151FE8B1F500073BDE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9D8879414A12CE04C1F082FA /* Pods-SparkleAutoUpdater.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -250,13 +274,17 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SparkleAutoUpdater",
+				);
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = SparkleAutoUpdater/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.charltonprovatas.com.SparkleAutoUpdater;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
+				SKIP_INSTALL = NO;
 				SWIFT_VERSION = 4.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -265,6 +293,7 @@
 		};
 		3E1FEE161FE8B1F500073BDE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DEB26D397117467279353F3D /* Pods-SparkleAutoUpdater.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -275,13 +304,17 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SparkleAutoUpdater",
+				);
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = SparkleAutoUpdater/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.charltonprovatas.com.SparkleAutoUpdater;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
+				SKIP_INSTALL = NO;
 				SWIFT_VERSION = 4.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
