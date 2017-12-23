@@ -12,17 +12,17 @@ import SwiftyXML
 final class CPXMLManager {
     
     /// adds an item to app cast file and removes the last item if it exists
-    public class func editUpdateNotes(forXMLFileatURL url: URL, versionSet: CPFileManagerVersionSet, publicZipURL: URL, dsaSignature: String, updateNotes: String) throws {
+    public class func editUpdateNotes(forXMLFileAtURL url: URL, versionSet: CPFileManagerVersionSet, publicZipURL: URL, dsaSignature: String, updateNotes: String) throws {
         do {
             
-            guard let contents = XML(url: url), contents.children.first != nil else {
+            guard let contents = XML(url: url), let firstChild = contents.children.first else {
                 throw CPXMLManagerError.parseError
             }
-            guard let lastItemIndex = indexOfLastXMLAppcastItem(inParentElementsChildren: contents.children.first!.children) else {
+            guard let lastItemIndex = indexOfLastXMLAppcastItem(inParentElementsChildren: firstChild.children) else {
                 throw CPXMLManagerError.noItemsFound
             }
             
-            let newItem = contents.children.first!.children.remove(at: lastItemIndex).copied()
+            let newItem = firstChild.children.remove(at: lastItemIndex)
             
             newItem.children[0].value = "Version \(versionSet.0)"
             newItem.children[1].value = nil
@@ -31,8 +31,7 @@ final class CPXMLManager {
             newItem.children[3].attributes["sparkle:version"] = versionSet.1
             newItem.children[3].attributes["sparkle:shortVersionString"] = versionSet.0
             newItem.children[3].attributes["url"] = publicZipURL.absoluteString
-            contents.children.first!.children.insert(newItem, at: 0)
-            
+            contents.children.first!.children.insert(newItem, at: 0)            
             try contents.toXMLString().write(to: url, atomically: true, encoding: .ascii)
             
         }catch let error {
@@ -41,10 +40,8 @@ final class CPXMLManager {
     }
     
     private class func indexOfLastXMLAppcastItem(inParentElementsChildren children: [XML]) -> Int? {
-        for i in 0..<children.count {
-            if children[i].children.count < 1, i > 0 {
-                return i - 1
-            }
+        for i in 0..<children.count where children[i].children.count > 1  {
+            return children.indices[safe: i] ?? 0
         }
         return nil
     }
