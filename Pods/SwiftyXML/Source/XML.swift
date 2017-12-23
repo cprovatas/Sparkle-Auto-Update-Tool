@@ -234,7 +234,7 @@ open class XML {
     public var value:String?
     public var children:[XML] = []
     
-    internal weak var parent:XML?
+    public weak var parent:XML?
     
     public init(name:String, attributes:[String:Any] = [:], value: Any? = nil) {
         self.name = name
@@ -242,13 +242,6 @@ open class XML {
         if let value = value {
             self.value = String(describing: value)
         }
-    }
-    
-    public func copied() -> XML {
-        let copy = XML(name: name, attributes: attributes, value: value)
-        copy.children = children
-        copy.parent = parent
-        return copy
     }
     
     private convenience init(xml: XML) {
@@ -363,21 +356,12 @@ open class XML {
         }
     }
     
-    public func removeAttribute(forKey key: String) {
-        attributes.removeValue(forKey: key)
-    }
-    
     public func addChild(_ xml:XML) {
         guard xml !== self else {
             fatalError("can not add self to xml children list!")
         }
         children.append(xml)
         xml.parent = self
-    }
-    
-    public func removeLastChild() {
-        children.removeLast()
-        children.last?.parent = self
     }
     
     public func addChildren(_ xmls: [XML]) {
@@ -618,7 +602,7 @@ public extension XML {
     }
     
     private func getAttributeString() -> String {
-        return self.attributes.map{" \($0.0)=\"\($0.1)\""}.joined()
+        return self.attributes.map{ " \($0)=\"\($1)\"" }.joined()
     }
     
     private func getStartPart(numTabs:Int) -> String {

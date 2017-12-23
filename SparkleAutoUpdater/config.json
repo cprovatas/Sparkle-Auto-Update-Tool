@@ -1,0 +1,10 @@
+
+{    
+    "appBundlePath": "/Users/charltonprovatas/Library/Developer/Xcode/DerivedData/JK2_Annie-frkoeqogiwtlgbatbvkfkyjmecau/Build/Products/Debug/JK2-Annie.app",
+    "dsaPrivPath": "/Users/charltonprovatas/Downloads/JK2-Annie/JK2-Annie/dsa_priv.pem",
+    "httpUpdatesFolderPath": "http://159.203.107.53/JK2-Annie/Updates",
+    "appcastFileName": "appcast.xml",
+    "sftpUsername": "root",
+    "sftpPassword": "Appgirl50",
+    "updateNotes": "my updates notes"
+}
