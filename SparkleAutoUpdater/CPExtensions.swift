@@ -51,12 +51,3 @@ extension Collection {
     }
 }
 
-extension XML {
-    func copied() -> XML {
-        let copy = XML(name: name, attributes: attributes, value: value)
-        copy.children = children
-        copy.parent = parent
-        return copy
-    }
-}
-
