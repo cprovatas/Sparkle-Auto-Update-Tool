@@ -74,7 +74,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/cprovatas/Sparkle-Auto-Update-Tool.git", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/cprovatas/Sparkle-Auto-Update-Tool.git", :tag => "master" }
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
