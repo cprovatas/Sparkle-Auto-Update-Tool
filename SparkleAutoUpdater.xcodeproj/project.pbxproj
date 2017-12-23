@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1ED9E0B3ED72B19C0F90E861 /* Pods_SparkleAutoUpdater.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DD375E82D1677FC4ABA7970 /* Pods_SparkleAutoUpdater.framework */; };
 		3E8003471FEDC8A800AF2BBE /* config.json in Resources */ = {isa = PBXBuildFile; fileRef = 3E8003461FEDC8A800AF2BBE /* config.json */; };
 		3E819FEC1FE8B3F400FD383F /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED6BAE01F099AEA0008993A /* main.swift */; };
 		3E819FED1FE8B3F900FD383F /* CPExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED6BAF51F09C0740008993A /* CPExtensions.swift */; };
@@ -18,11 +19,9 @@
 		3EB575311FE9D45E00AB5089 /* generate_keys in Resources */ = {isa = PBXBuildFile; fileRef = 3E4AA0051FE2B3A200BE6EF0 /* generate_keys */; };
 		3EB575321FE9D45E00AB5089 /* sign_update in Resources */ = {isa = PBXBuildFile; fileRef = 3E4AA0091FE2B3A800BE6EF0 /* sign_update */; };
 		3EB575331FE9D45E00AB5089 /* sshpass in Resources */ = {isa = PBXBuildFile; fileRef = 3E4AA01B1FE4762200BE6EF0 /* sshpass */; };
-		EC2D9683CD574E2C49ED6CCF /* Pods_SparkleAutoUpdater.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06E63D7DC122DFBF324D3255 /* Pods_SparkleAutoUpdater.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		06E63D7DC122DFBF324D3255 /* Pods_SparkleAutoUpdater.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SparkleAutoUpdater.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E07EE431F0DAB94006ED43F /* CPXMLManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPXMLManager.swift; sourceTree = "<group>"; };
 		3E1FEE0F1FE8B1F500073BDE /* SparkleAutoUpdater.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SparkleAutoUpdater.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E4AA0031FE2B39500BE6EF0 /* BinaryDelta */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = BinaryDelta; sourceTree = "<group>"; };
@@ -38,8 +37,9 @@
 		3ED6BAE01F099AEA0008993A /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		3ED6BAF31F09BA460008993A /* CPFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPFileManager.swift; sourceTree = "<group>"; };
 		3ED6BAF51F09C0740008993A /* CPExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPExtensions.swift; sourceTree = "<group>"; };
-		9D8879414A12CE04C1F082FA /* Pods-SparkleAutoUpdater.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SparkleAutoUpdater.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-SparkleAutoUpdater/Pods-SparkleAutoUpdater.debug.xcconfig"; sourceTree = "<group>"; };
-		DEB26D397117467279353F3D /* Pods-SparkleAutoUpdater.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SparkleAutoUpdater.release.xcconfig"; path = "../Pods/Target Support Files/Pods-SparkleAutoUpdater/Pods-SparkleAutoUpdater.release.xcconfig"; sourceTree = "<group>"; };
+		6DD375E82D1677FC4ABA7970 /* Pods_SparkleAutoUpdater.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SparkleAutoUpdater.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6AF3C141DB1DE968C5021B1 /* Pods-SparkleAutoUpdater.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SparkleAutoUpdater.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SparkleAutoUpdater/Pods-SparkleAutoUpdater.debug.xcconfig"; sourceTree = "<group>"; };
+		F0962C687C949FACED5C3134 /* Pods-SparkleAutoUpdater.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SparkleAutoUpdater.release.xcconfig"; path = "Pods/Target Support Files/Pods-SparkleAutoUpdater/Pods-SparkleAutoUpdater.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,18 +47,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC2D9683CD574E2C49ED6CCF /* Pods_SparkleAutoUpdater.framework in Frameworks */,
+				1ED9E0B3ED72B19C0F90E861 /* Pods_SparkleAutoUpdater.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0CB7AEC1E3F2BE3233DBC607 /* Pods */ = {
+		2A9B438AEC0630FE7027D2D7 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				9D8879414A12CE04C1F082FA /* Pods-SparkleAutoUpdater.debug.xcconfig */,
-				DEB26D397117467279353F3D /* Pods-SparkleAutoUpdater.release.xcconfig */,
+				B6AF3C141DB1DE968C5021B1 /* Pods-SparkleAutoUpdater.debug.xcconfig */,
+				F0962C687C949FACED5C3134 /* Pods-SparkleAutoUpdater.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -79,7 +79,7 @@
 			children = (
 				3E92DACF1F0B220600D98D7B /* Foundation.framework */,
 				3E92DACE1F0B21FA00D98D7B /* CFNetwork.framework */,
-				06E63D7DC122DFBF324D3255 /* Pods_SparkleAutoUpdater.framework */,
+				6DD375E82D1677FC4ABA7970 /* Pods_SparkleAutoUpdater.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -90,7 +90,7 @@
 				3ED6BADD1F099AEA0008993A /* SparkleAutoUpdater */,
 				3ED6BADC1F099AEA0008993A /* Products */,
 				3E92DACD1F0B21FA00D98D7B /* Frameworks */,
-				0CB7AEC1E3F2BE3233DBC607 /* Pods */,
+				2A9B438AEC0630FE7027D2D7 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -143,12 +143,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3E1FEE141FE8B1F500073BDE /* Build configuration list for PBXNativeTarget "SparkleAutoUpdater" */;
 			buildPhases = (
-				5C4A53E54721C3C52904038A /* [CP] Check Pods Manifest.lock */,
+				BE43E5D52BADA739F3D6D05F /* [CP] Check Pods Manifest.lock */,
 				3E1FEE0A1FE8B1F500073BDE /* Sources */,
 				3E1FEE0B1FE8B1F500073BDE /* Frameworks */,
 				3E1FEE0C1FE8B1F500073BDE /* Headers */,
 				3E1FEE0D1FE8B1F500073BDE /* Resources */,
-				4E1519D2C6C2B7E9F57EDA44 /* [CP] Copy Pods Resources */,
+				D96E168742B05D66A490C03F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -209,22 +209,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4E1519D2C6C2B7E9F57EDA44 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-SparkleAutoUpdater/Pods-SparkleAutoUpdater-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		5C4A53E54721C3C52904038A /* [CP] Check Pods Manifest.lock */ = {
+		BE43E5D52BADA739F3D6D05F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -240,6 +225,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D96E168742B05D66A490C03F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SparkleAutoUpdater/Pods-SparkleAutoUpdater-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -263,7 +263,7 @@
 /* Begin XCBuildConfiguration section */
 		3E1FEE151FE8B1F500073BDE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9D8879414A12CE04C1F082FA /* Pods-SparkleAutoUpdater.debug.xcconfig */;
+			baseConfigurationReference = B6AF3C141DB1DE968C5021B1 /* Pods-SparkleAutoUpdater.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -293,7 +293,7 @@
 		};
 		3E1FEE161FE8B1F500073BDE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DEB26D397117467279353F3D /* Pods-SparkleAutoUpdater.release.xcconfig */;
+			baseConfigurationReference = F0962C687C949FACED5C3134 /* Pods-SparkleAutoUpdater.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;

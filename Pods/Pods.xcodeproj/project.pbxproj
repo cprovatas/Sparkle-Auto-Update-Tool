@@ -7,106 +7,62 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		12433A837C218AE8AF2BCA9716A0442D /* FileUploadOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0851E8D74C836CC5E00C92009FD1C73 /* FileUploadOperation.swift */; };
-		2CB63B7B6C8182ACBB58FF9067EDBD8E /* rebekka-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E4788E9028FE9C4D63E37D6977C9B2 /* rebekka-dummy.m */; };
-		2CECCEE76A7FE8EDCBF50025C9B9AF52 /* SwiftyXML-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 613119DFA68955B0DFECE218807531AA /* SwiftyXML-dummy.m */; };
-		44884F49D8CF9C48C4A8565833F9B4AD /* rebekka-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F1EBCD7DD00100EE267112DA1FE5C8ED /* rebekka-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		49D05EC2215544E732335083C48A4836 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 270DD1219F1E6CF00379D39F252D87C6 /* Cocoa.framework */; };
-		5E58DE053181D456B89F8036176B8387 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 270DD1219F1E6CF00379D39F252D87C6 /* Cocoa.framework */; };
-		6AA8471795EAA6D1C09F7ECD5D70957F /* SwiftyXML-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 34991C73F77F07468CB509D79C3682C8 /* SwiftyXML-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		836159709E7699732DC759615254C3B9 /* Pods-SparkleAutoUpdater-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C8C6F7BF8B8C4F562FCFCC6643249C4 /* Pods-SparkleAutoUpdater-dummy.m */; };
-		8ED92CA4D6F38DE1E4BC315C58322763 /* Pods-SparkleAutoUpdater-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2143E75EC3D2CA37B562B1608EBAA8B0 /* Pods-SparkleAutoUpdater-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9A58E8B65A65FC2D272469DBB1BA87D6 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F7B37F1ADFC0A1C8C6AF2DE0978FFF /* Session.swift */; };
-		A52F24F177EABDCBCC0F132346331F1C /* DirectoryCreationOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F5DA7172435F06B19FC51357D31424 /* DirectoryCreationOperation.swift */; };
-		A5D2A3D3742D904F7A4EA08A3EA015E8 /* Operation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15991E1934E2F08B3FE933F1D41CBED7 /* Operation.swift */; };
-		C31E86667907B33BD3152581D5A2CA2E /* WriteStreamOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD93F991CCF1AC915417E85799EC0AC8 /* WriteStreamOperation.swift */; };
-		D1C10399EEE5DBCFF4C4E20CCEF88C3E /* FileDownloadOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A94748D7FC6A000DDD0F219755308E /* FileDownloadOperation.swift */; };
-		D5A83381402E2AB679CBCC529564871E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 270DD1219F1E6CF00379D39F252D87C6 /* Cocoa.framework */; };
-		D94CD712D5C75D5FE67A70F2B082E35E /* ReadStreamOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91E2F7B3848D0D04683579E2C02486A /* ReadStreamOperation.swift */; };
-		F43536785D3B6EBE86158A80964FE0F4 /* StreamOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D59E1283AE253E479F019D73B53C1E /* StreamOperation.swift */; };
-		F50C6E7C7EEA3717AD807EFCAA821B82 /* XML.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8256435A68677874D22DCED0444E6FFF /* XML.swift */; };
-		F8392175B5ED9C70136B143654436E5F /* ResourceListOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2370075D06C714D231DE97611FB0A919 /* ResourceListOperation.swift */; };
+		177EC0F866B2EFBA80D9181F342F9A9A /* SwiftyXML-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E6BBBE9994F4B7542988247340596F7 /* SwiftyXML-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4B22DAC2976D386C706E5CA5F69AA4BD /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 270DD1219F1E6CF00379D39F252D87C6 /* Cocoa.framework */; };
+		6A4EC6F40378CBAC8B0FE5A1A0DEC59E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 270DD1219F1E6CF00379D39F252D87C6 /* Cocoa.framework */; };
+		A1CA635BC35183DA6F4BDE1AC87AC654 /* SwiftyXML-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A938682D6E8A9868FC532C524A42A6B2 /* SwiftyXML-dummy.m */; };
+		A434282A5ECEAE523C07FBC6AB4336FB /* Pods-SparkleAutoUpdater-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F906D198EDC64D569E42C74E7C99CBAB /* Pods-SparkleAutoUpdater-dummy.m */; };
+		A87D077090775C0D81A2DAA758E2E33C /* XML.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7013052EDBC907E86D2E2414B766052 /* XML.swift */; };
+		BC7DC6DD084B7C186C235F5AD577ADE5 /* Pods-SparkleAutoUpdater-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A1EE93133C7B649142134231B65240A9 /* Pods-SparkleAutoUpdater-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		B5EBCF686991910B7EA508410E9F6E7E /* PBXContainerItemProxy */ = {
+		5B948653486E09DD5DF5222B21C9009A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 0B973B258006836BBF8AA10AA35DD374;
+			remoteGlobalIDString = E1F03B673BB38E63D51FE7696C5AC9AA;
 			remoteInfo = SwiftyXML;
-		};
-		EA58D04CD6DB5FD17F5BAC3ECF7023E8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F5C643E5E03C70E9E74AD815942806CE;
-			remoteInfo = rebekka;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		14D59E1283AE253E479F019D73B53C1E /* StreamOperation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StreamOperation.swift; path = "rebekka-source/Rebekka/StreamOperation.swift"; sourceTree = "<group>"; };
-		15991E1934E2F08B3FE933F1D41CBED7 /* Operation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Operation.swift; path = "rebekka-source/Rebekka/Operation.swift"; sourceTree = "<group>"; };
-		19F5DA7172435F06B19FC51357D31424 /* DirectoryCreationOperation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DirectoryCreationOperation.swift; path = "rebekka-source/Rebekka/DirectoryCreationOperation.swift"; sourceTree = "<group>"; };
-		1C8C6F7BF8B8C4F562FCFCC6643249C4 /* Pods-SparkleAutoUpdater-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SparkleAutoUpdater-dummy.m"; sourceTree = "<group>"; };
-		2143E75EC3D2CA37B562B1608EBAA8B0 /* Pods-SparkleAutoUpdater-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SparkleAutoUpdater-umbrella.h"; sourceTree = "<group>"; };
-		2370075D06C714D231DE97611FB0A919 /* ResourceListOperation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResourceListOperation.swift; path = "rebekka-source/Rebekka/ResourceListOperation.swift"; sourceTree = "<group>"; };
+		1C2957671B44CBF300B86D4FF288B078 /* SwiftyXML.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftyXML.framework; path = SwiftyXML.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		216E0B57CBFB026117DCB63C08437456 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		270DD1219F1E6CF00379D39F252D87C6 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
-		284F2677FC99409872F99BD2D90DA9B3 /* rebekka.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = rebekka.modulemap; sourceTree = "<group>"; };
-		2EA51DDF911962C44208275A1B62E5A0 /* Pods-SparkleAutoUpdater-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SparkleAutoUpdater-frameworks.sh"; sourceTree = "<group>"; };
-		34991C73F77F07468CB509D79C3682C8 /* SwiftyXML-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyXML-umbrella.h"; sourceTree = "<group>"; };
-		4D8494204DB0435056FE277228C0264E /* SwiftyXML.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyXML.xcconfig; sourceTree = "<group>"; };
-		5810844706DC5E69326D5B2F315F5CC6 /* Pods-SparkleAutoUpdater.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SparkleAutoUpdater.debug.xcconfig"; sourceTree = "<group>"; };
-		613119DFA68955B0DFECE218807531AA /* SwiftyXML-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyXML-dummy.m"; sourceTree = "<group>"; };
-		61F7B37F1ADFC0A1C8C6AF2DE0978FFF /* Session.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Session.swift; path = "rebekka-source/Rebekka/Session.swift"; sourceTree = "<group>"; };
-		67F4BC7E408B564E6378E773EE71E09C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7B992755B81D96936602B4BA6250D57A /* rebekka-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "rebekka-prefix.pch"; sourceTree = "<group>"; };
-		7CD04B309D538FDD073F6B4692C4F736 /* Pods-SparkleAutoUpdater-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SparkleAutoUpdater-resources.sh"; sourceTree = "<group>"; };
-		7D41E11F96B450CFD801FB9E42A25388 /* Pods-SparkleAutoUpdater.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-SparkleAutoUpdater.modulemap"; sourceTree = "<group>"; };
-		8256435A68677874D22DCED0444E6FFF /* XML.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = XML.swift; path = Source/XML.swift; sourceTree = "<group>"; };
-		8CED0F04DC6F938E867BB3CDC33F4B16 /* Pods_SparkleAutoUpdater.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SparkleAutoUpdater.framework; path = "Pods-SparkleAutoUpdater.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9008D58DA7FA2E4F46F8979B633DDA69 /* Pods-SparkleAutoUpdater.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SparkleAutoUpdater.release.xcconfig"; sourceTree = "<group>"; };
-		907816DF4793F6471173FB7F6EBCD4ED /* rebekka.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = rebekka.framework; path = rebekka.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A168CC96D71EA7EAE888D291FBF2AAE /* SwiftyXML.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SwiftyXML.modulemap; sourceTree = "<group>"; };
+		3463A8CB988100B7554E0D7978C312E0 /* Pods-SparkleAutoUpdater.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-SparkleAutoUpdater.modulemap"; sourceTree = "<group>"; };
+		4D924ADD70C808B2955882F2E83D0440 /* Pods-SparkleAutoUpdater.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SparkleAutoUpdater.release.xcconfig"; sourceTree = "<group>"; };
+		5297741F1223918D5B52EBE71670FA79 /* Pods-SparkleAutoUpdater-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SparkleAutoUpdater-resources.sh"; sourceTree = "<group>"; };
+		7E6BBBE9994F4B7542988247340596F7 /* SwiftyXML-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyXML-umbrella.h"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		93D8465D2B21AA0CBE7BA87144AA17D2 /* Pods-SparkleAutoUpdater-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SparkleAutoUpdater-acknowledgements.markdown"; sourceTree = "<group>"; };
-		B3C06C36311E0D8333723BABFBC1CBA3 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B8B90E0CE5B6FDFDB60CC4ED16331321 /* SwiftyXML-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyXML-prefix.pch"; sourceTree = "<group>"; };
-		B8C7464EF37BB9D32ED5F734A9DFD6D5 /* rebekka.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = rebekka.xcconfig; sourceTree = "<group>"; };
-		BD93F991CCF1AC915417E85799EC0AC8 /* WriteStreamOperation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WriteStreamOperation.swift; path = "rebekka-source/Rebekka/WriteStreamOperation.swift"; sourceTree = "<group>"; };
-		C1F4BFEE7165F39FE2F2C5F8E961148A /* Pods-SparkleAutoUpdater-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SparkleAutoUpdater-acknowledgements.plist"; sourceTree = "<group>"; };
-		C2A94748D7FC6A000DDD0F219755308E /* FileDownloadOperation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FileDownloadOperation.swift; path = "rebekka-source/Rebekka/FileDownloadOperation.swift"; sourceTree = "<group>"; };
-		C4068EE96C915682FDAA8CCB5D055BBA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C9E4788E9028FE9C4D63E37D6977C9B2 /* rebekka-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "rebekka-dummy.m"; sourceTree = "<group>"; };
-		E91E2F7B3848D0D04683579E2C02486A /* ReadStreamOperation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReadStreamOperation.swift; path = "rebekka-source/Rebekka/ReadStreamOperation.swift"; sourceTree = "<group>"; };
-		EDE5472D43BD1020C2988DD63998EB6D /* SwiftyXML.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftyXML.framework; path = SwiftyXML.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EED6D568CC523FCD735FDCEA07417399 /* SwiftyXML.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SwiftyXML.modulemap; sourceTree = "<group>"; };
-		F0851E8D74C836CC5E00C92009FD1C73 /* FileUploadOperation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FileUploadOperation.swift; path = "rebekka-source/Rebekka/FileUploadOperation.swift"; sourceTree = "<group>"; };
-		F1EBCD7DD00100EE267112DA1FE5C8ED /* rebekka-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "rebekka-umbrella.h"; sourceTree = "<group>"; };
+		A1EE93133C7B649142134231B65240A9 /* Pods-SparkleAutoUpdater-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SparkleAutoUpdater-umbrella.h"; sourceTree = "<group>"; };
+		A20C8AAF5D4F0C138AA6EE4E2F752080 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A938682D6E8A9868FC532C524A42A6B2 /* SwiftyXML-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyXML-dummy.m"; sourceTree = "<group>"; };
+		ADE1F2F82F1ED76F8FB3C437493D9D94 /* SwiftyXML-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyXML-prefix.pch"; sourceTree = "<group>"; };
+		C7013052EDBC907E86D2E2414B766052 /* XML.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = XML.swift; path = Source/XML.swift; sourceTree = "<group>"; };
+		D75DBC2AD91F80AD5F5A3008A221610C /* SwiftyXML.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyXML.xcconfig; sourceTree = "<group>"; };
+		E67FE88AF1AAED28FBD661C26758F59E /* Pods-SparkleAutoUpdater.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SparkleAutoUpdater.debug.xcconfig"; sourceTree = "<group>"; };
+		EE3D66665B22EEC33F8BA780AB7CBFC4 /* Pods-SparkleAutoUpdater-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SparkleAutoUpdater-acknowledgements.markdown"; sourceTree = "<group>"; };
+		F123EC4F01494371ECEC2D5BF49B2460 /* Pods_SparkleAutoUpdater.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SparkleAutoUpdater.framework; path = "Pods-SparkleAutoUpdater.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1EBD02313F71DBC4B1B70B7343F8C0F /* Pods-SparkleAutoUpdater-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SparkleAutoUpdater-acknowledgements.plist"; sourceTree = "<group>"; };
+		F906D198EDC64D569E42C74E7C99CBAB /* Pods-SparkleAutoUpdater-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SparkleAutoUpdater-dummy.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		05E8C1BB8BFC22286733DFB7BFF50B03 /* Frameworks */ = {
+		96AD4423AF31AD5F161F7DE0A58B928E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49D05EC2215544E732335083C48A4836 /* Cocoa.framework in Frameworks */,
+				4B22DAC2976D386C706E5CA5F69AA4BD /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1A3D09E18508FF61406797E9089274B6 /* Frameworks */ = {
+		FD2AFA3F699F7D7205A6A7F8BC01EABE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5A83381402E2AB679CBCC529564871E /* Cocoa.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3457FAC157F17FD9A2D395EC15462F57 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5E58DE053181D456B89F8036176B8387 /* Cocoa.framework in Frameworks */,
+				6A4EC6F40378CBAC8B0FE5A1A0DEC59E /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,6 +77,15 @@
 			name = "OS X";
 			sourceTree = "<group>";
 		};
+		211A996D0E0793A406A40E84C65D1EB5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F123EC4F01494371ECEC2D5BF49B2460 /* Pods_SparkleAutoUpdater.framework */,
+				1C2957671B44CBF300B86D4FF288B078 /* SwiftyXML.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		39E9EE8210D861DFD82346C1F5EB7218 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -129,63 +94,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		3FB3B19F967E835E093D8290336D4364 /* Targets Support Files */ = {
+		489C6CF4EA6986D8DCB3FBBF598D604C /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				65949A180A8FE51CF45D8E1C287AB0A9 /* Pods-SparkleAutoUpdater */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		60610049FCB7EC62C12ABDE0C095FB2D /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				C4068EE96C915682FDAA8CCB5D055BBA /* Info.plist */,
-				EED6D568CC523FCD735FDCEA07417399 /* SwiftyXML.modulemap */,
-				4D8494204DB0435056FE277228C0264E /* SwiftyXML.xcconfig */,
-				613119DFA68955B0DFECE218807531AA /* SwiftyXML-dummy.m */,
-				B8B90E0CE5B6FDFDB60CC4ED16331321 /* SwiftyXML-prefix.pch */,
-				34991C73F77F07468CB509D79C3682C8 /* SwiftyXML-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/SwiftyXML";
-			sourceTree = "<group>";
-		};
-		65949A180A8FE51CF45D8E1C287AB0A9 /* Pods-SparkleAutoUpdater */ = {
-			isa = PBXGroup;
-			children = (
-				B3C06C36311E0D8333723BABFBC1CBA3 /* Info.plist */,
-				7D41E11F96B450CFD801FB9E42A25388 /* Pods-SparkleAutoUpdater.modulemap */,
-				93D8465D2B21AA0CBE7BA87144AA17D2 /* Pods-SparkleAutoUpdater-acknowledgements.markdown */,
-				C1F4BFEE7165F39FE2F2C5F8E961148A /* Pods-SparkleAutoUpdater-acknowledgements.plist */,
-				1C8C6F7BF8B8C4F562FCFCC6643249C4 /* Pods-SparkleAutoUpdater-dummy.m */,
-				2EA51DDF911962C44208275A1B62E5A0 /* Pods-SparkleAutoUpdater-frameworks.sh */,
-				7CD04B309D538FDD073F6B4692C4F736 /* Pods-SparkleAutoUpdater-resources.sh */,
-				2143E75EC3D2CA37B562B1608EBAA8B0 /* Pods-SparkleAutoUpdater-umbrella.h */,
-				5810844706DC5E69326D5B2F315F5CC6 /* Pods-SparkleAutoUpdater.debug.xcconfig */,
-				9008D58DA7FA2E4F46F8979B633DDA69 /* Pods-SparkleAutoUpdater.release.xcconfig */,
-			);
-			name = "Pods-SparkleAutoUpdater";
-			path = "Target Support Files/Pods-SparkleAutoUpdater";
-			sourceTree = "<group>";
-		};
-		7697A2B852E90FC34F470839855B589E /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				D3FF781665374253081913DEA88012FE /* rebekka */,
-				D0521388F646C4B8E7713F524473AD1C /* SwiftyXML */,
+				60832222CA92160283BC442659D1B879 /* SwiftyXML */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		7C964D6A70B696C265DD3CC25255603A /* Products */ = {
+		60832222CA92160283BC442659D1B879 /* SwiftyXML */ = {
 			isa = PBXGroup;
 			children = (
-				8CED0F04DC6F938E867BB3CDC33F4B16 /* Pods_SparkleAutoUpdater.framework */,
-				907816DF4793F6471173FB7F6EBCD4ED /* rebekka.framework */,
-				EDE5472D43BD1020C2988DD63998EB6D /* SwiftyXML.framework */,
+				C7013052EDBC907E86D2E2414B766052 /* XML.swift */,
+				D973C082D2CA82320788B13719D054E7 /* Support Files */,
 			);
-			name = Products;
+			name = SwiftyXML;
+			path = SwiftyXML;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -193,91 +117,80 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				39E9EE8210D861DFD82346C1F5EB7218 /* Frameworks */,
-				7697A2B852E90FC34F470839855B589E /* Pods */,
-				7C964D6A70B696C265DD3CC25255603A /* Products */,
-				3FB3B19F967E835E093D8290336D4364 /* Targets Support Files */,
+				489C6CF4EA6986D8DCB3FBBF598D604C /* Pods */,
+				211A996D0E0793A406A40E84C65D1EB5 /* Products */,
+				AA23DF4BBC51F728517D121870BC705F /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		C1AE748B71C1C95A6CE45B26732248DC /* Support Files */ = {
+		8FD4108693ABC4DACC2BC622F43A8F73 /* Pods-SparkleAutoUpdater */ = {
 			isa = PBXGroup;
 			children = (
-				67F4BC7E408B564E6378E773EE71E09C /* Info.plist */,
-				284F2677FC99409872F99BD2D90DA9B3 /* rebekka.modulemap */,
-				B8C7464EF37BB9D32ED5F734A9DFD6D5 /* rebekka.xcconfig */,
-				C9E4788E9028FE9C4D63E37D6977C9B2 /* rebekka-dummy.m */,
-				7B992755B81D96936602B4BA6250D57A /* rebekka-prefix.pch */,
-				F1EBCD7DD00100EE267112DA1FE5C8ED /* rebekka-umbrella.h */,
+				A20C8AAF5D4F0C138AA6EE4E2F752080 /* Info.plist */,
+				3463A8CB988100B7554E0D7978C312E0 /* Pods-SparkleAutoUpdater.modulemap */,
+				EE3D66665B22EEC33F8BA780AB7CBFC4 /* Pods-SparkleAutoUpdater-acknowledgements.markdown */,
+				F1EBD02313F71DBC4B1B70B7343F8C0F /* Pods-SparkleAutoUpdater-acknowledgements.plist */,
+				F906D198EDC64D569E42C74E7C99CBAB /* Pods-SparkleAutoUpdater-dummy.m */,
+				5297741F1223918D5B52EBE71670FA79 /* Pods-SparkleAutoUpdater-resources.sh */,
+				A1EE93133C7B649142134231B65240A9 /* Pods-SparkleAutoUpdater-umbrella.h */,
+				E67FE88AF1AAED28FBD661C26758F59E /* Pods-SparkleAutoUpdater.debug.xcconfig */,
+				4D924ADD70C808B2955882F2E83D0440 /* Pods-SparkleAutoUpdater.release.xcconfig */,
+			);
+			name = "Pods-SparkleAutoUpdater";
+			path = "Target Support Files/Pods-SparkleAutoUpdater";
+			sourceTree = "<group>";
+		};
+		AA23DF4BBC51F728517D121870BC705F /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				8FD4108693ABC4DACC2BC622F43A8F73 /* Pods-SparkleAutoUpdater */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		D973C082D2CA82320788B13719D054E7 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				216E0B57CBFB026117DCB63C08437456 /* Info.plist */,
+				2A168CC96D71EA7EAE888D291FBF2AAE /* SwiftyXML.modulemap */,
+				D75DBC2AD91F80AD5F5A3008A221610C /* SwiftyXML.xcconfig */,
+				A938682D6E8A9868FC532C524A42A6B2 /* SwiftyXML-dummy.m */,
+				ADE1F2F82F1ED76F8FB3C437493D9D94 /* SwiftyXML-prefix.pch */,
+				7E6BBBE9994F4B7542988247340596F7 /* SwiftyXML-umbrella.h */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/rebekka";
-			sourceTree = "<group>";
-		};
-		D0521388F646C4B8E7713F524473AD1C /* SwiftyXML */ = {
-			isa = PBXGroup;
-			children = (
-				8256435A68677874D22DCED0444E6FFF /* XML.swift */,
-				60610049FCB7EC62C12ABDE0C095FB2D /* Support Files */,
-			);
-			name = SwiftyXML;
-			path = SwiftyXML;
-			sourceTree = "<group>";
-		};
-		D3FF781665374253081913DEA88012FE /* rebekka */ = {
-			isa = PBXGroup;
-			children = (
-				19F5DA7172435F06B19FC51357D31424 /* DirectoryCreationOperation.swift */,
-				C2A94748D7FC6A000DDD0F219755308E /* FileDownloadOperation.swift */,
-				F0851E8D74C836CC5E00C92009FD1C73 /* FileUploadOperation.swift */,
-				15991E1934E2F08B3FE933F1D41CBED7 /* Operation.swift */,
-				E91E2F7B3848D0D04683579E2C02486A /* ReadStreamOperation.swift */,
-				2370075D06C714D231DE97611FB0A919 /* ResourceListOperation.swift */,
-				61F7B37F1ADFC0A1C8C6AF2DE0978FFF /* Session.swift */,
-				14D59E1283AE253E479F019D73B53C1E /* StreamOperation.swift */,
-				BD93F991CCF1AC915417E85799EC0AC8 /* WriteStreamOperation.swift */,
-				C1AE748B71C1C95A6CE45B26732248DC /* Support Files */,
-			);
-			name = rebekka;
-			path = rebekka;
+			path = "../Target Support Files/SwiftyXML";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		007C90B4F575365E316E694C1A3B5DA1 /* Headers */ = {
+		410A9C11E188B0181D84E294338A2316 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8ED92CA4D6F38DE1E4BC315C58322763 /* Pods-SparkleAutoUpdater-umbrella.h in Headers */,
+				177EC0F866B2EFBA80D9181F342F9A9A /* SwiftyXML-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		45C53A8F88F5E71AE1897A5BC2500374 /* Headers */ = {
+		E83D243F8D93F0AD74C969CB91B0FDAA /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6AA8471795EAA6D1C09F7ECD5D70957F /* SwiftyXML-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B71CBD129A3B58B6395727631129ECDD /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				44884F49D8CF9C48C4A8565833F9B4AD /* rebekka-umbrella.h in Headers */,
+				BC7DC6DD084B7C186C235F5AD577ADE5 /* Pods-SparkleAutoUpdater-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		0B973B258006836BBF8AA10AA35DD374 /* SwiftyXML */ = {
+		E1F03B673BB38E63D51FE7696C5AC9AA /* SwiftyXML */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 44AECB2D05B1D304364DAFEBE8229573 /* Build configuration list for PBXNativeTarget "SwiftyXML" */;
+			buildConfigurationList = A065BC7C285B12BBDE9B1FBE44BB3C92 /* Build configuration list for PBXNativeTarget "SwiftyXML" */;
 			buildPhases = (
-				5E677F8F3DEBF9D444874C431AAE6A0E /* Sources */,
-				1A3D09E18508FF61406797E9089274B6 /* Frameworks */,
-				45C53A8F88F5E71AE1897A5BC2500374 /* Headers */,
+				B2DAA7F10743DCEA815C1047F21EDC9F /* Sources */,
+				96AD4423AF31AD5F161F7DE0A58B928E /* Frameworks */,
+				410A9C11E188B0181D84E294338A2316 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -285,43 +198,25 @@
 			);
 			name = SwiftyXML;
 			productName = SwiftyXML;
-			productReference = EDE5472D43BD1020C2988DD63998EB6D /* SwiftyXML.framework */;
+			productReference = 1C2957671B44CBF300B86D4FF288B078 /* SwiftyXML.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		3CA2D6515095A5935516B29F2CA4F061 /* Pods-SparkleAutoUpdater */ = {
+		F1ABF31207284011AD15FAFAFAC174F1 /* Pods-SparkleAutoUpdater */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5685EC8309BBF5A943612EB687EAC71D /* Build configuration list for PBXNativeTarget "Pods-SparkleAutoUpdater" */;
+			buildConfigurationList = 69E15B55FF84AD1F21FA2404C31284DC /* Build configuration list for PBXNativeTarget "Pods-SparkleAutoUpdater" */;
 			buildPhases = (
-				7774296F2EAB115F09FB99605CF0AC78 /* Sources */,
-				05E8C1BB8BFC22286733DFB7BFF50B03 /* Frameworks */,
-				007C90B4F575365E316E694C1A3B5DA1 /* Headers */,
+				2463E457B8FB95840895F90DA01E1371 /* Sources */,
+				FD2AFA3F699F7D7205A6A7F8BC01EABE /* Frameworks */,
+				E83D243F8D93F0AD74C969CB91B0FDAA /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				3026264D9F31B80BE63096152155E869 /* PBXTargetDependency */,
-				DF2A49C834B12DDE334A433D5049B965 /* PBXTargetDependency */,
+				BEAB371CAE5201A3B50869369FDE9EE0 /* PBXTargetDependency */,
 			);
 			name = "Pods-SparkleAutoUpdater";
 			productName = "Pods-SparkleAutoUpdater";
-			productReference = 8CED0F04DC6F938E867BB3CDC33F4B16 /* Pods_SparkleAutoUpdater.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		F5C643E5E03C70E9E74AD815942806CE /* rebekka */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1A4B485A7664D1CBC99822DCBDD3C57E /* Build configuration list for PBXNativeTarget "rebekka" */;
-			buildPhases = (
-				430FD2FA1D228934ACB346D5BC79DCC1 /* Sources */,
-				3457FAC157F17FD9A2D395EC15462F57 /* Frameworks */,
-				B71CBD129A3B58B6395727631129ECDD /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = rebekka;
-			productName = rebekka;
-			productReference = 907816DF4793F6471173FB7F6EBCD4ED /* rebekka.framework */;
+			productReference = F123EC4F01494371ECEC2D5BF49B2460 /* Pods_SparkleAutoUpdater.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -341,73 +236,85 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 7C964D6A70B696C265DD3CC25255603A /* Products */;
+			productRefGroup = 211A996D0E0793A406A40E84C65D1EB5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3CA2D6515095A5935516B29F2CA4F061 /* Pods-SparkleAutoUpdater */,
-				F5C643E5E03C70E9E74AD815942806CE /* rebekka */,
-				0B973B258006836BBF8AA10AA35DD374 /* SwiftyXML */,
+				F1ABF31207284011AD15FAFAFAC174F1 /* Pods-SparkleAutoUpdater */,
+				E1F03B673BB38E63D51FE7696C5AC9AA /* SwiftyXML */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		430FD2FA1D228934ACB346D5BC79DCC1 /* Sources */ = {
+		2463E457B8FB95840895F90DA01E1371 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A52F24F177EABDCBCC0F132346331F1C /* DirectoryCreationOperation.swift in Sources */,
-				D1C10399EEE5DBCFF4C4E20CCEF88C3E /* FileDownloadOperation.swift in Sources */,
-				12433A837C218AE8AF2BCA9716A0442D /* FileUploadOperation.swift in Sources */,
-				A5D2A3D3742D904F7A4EA08A3EA015E8 /* Operation.swift in Sources */,
-				D94CD712D5C75D5FE67A70F2B082E35E /* ReadStreamOperation.swift in Sources */,
-				2CB63B7B6C8182ACBB58FF9067EDBD8E /* rebekka-dummy.m in Sources */,
-				F8392175B5ED9C70136B143654436E5F /* ResourceListOperation.swift in Sources */,
-				9A58E8B65A65FC2D272469DBB1BA87D6 /* Session.swift in Sources */,
-				F43536785D3B6EBE86158A80964FE0F4 /* StreamOperation.swift in Sources */,
-				C31E86667907B33BD3152581D5A2CA2E /* WriteStreamOperation.swift in Sources */,
+				A434282A5ECEAE523C07FBC6AB4336FB /* Pods-SparkleAutoUpdater-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5E677F8F3DEBF9D444874C431AAE6A0E /* Sources */ = {
+		B2DAA7F10743DCEA815C1047F21EDC9F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2CECCEE76A7FE8EDCBF50025C9B9AF52 /* SwiftyXML-dummy.m in Sources */,
-				F50C6E7C7EEA3717AD807EFCAA821B82 /* XML.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7774296F2EAB115F09FB99605CF0AC78 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				836159709E7699732DC759615254C3B9 /* Pods-SparkleAutoUpdater-dummy.m in Sources */,
+				A1CA635BC35183DA6F4BDE1AC87AC654 /* SwiftyXML-dummy.m in Sources */,
+				A87D077090775C0D81A2DAA758E2E33C /* XML.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		3026264D9F31B80BE63096152155E869 /* PBXTargetDependency */ = {
+		BEAB371CAE5201A3B50869369FDE9EE0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SwiftyXML;
-			target = 0B973B258006836BBF8AA10AA35DD374 /* SwiftyXML */;
-			targetProxy = B5EBCF686991910B7EA508410E9F6E7E /* PBXContainerItemProxy */;
-		};
-		DF2A49C834B12DDE334A433D5049B965 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = rebekka;
-			target = F5C643E5E03C70E9E74AD815942806CE /* rebekka */;
-			targetProxy = EA58D04CD6DB5FD17F5BAC3ECF7023E8 /* PBXContainerItemProxy */;
+			target = E1F03B673BB38E63D51FE7696C5AC9AA /* SwiftyXML */;
+			targetProxy = 5B948653486E09DD5DF5222B21C9009A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		2E9690CE9DF2B07AF918C94575466E41 /* Release */ = {
+		3851AECC318E6AAAFC720F9228085A75 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9008D58DA7FA2E4F46F8979B633DDA69 /* Pods-SparkleAutoUpdater.release.xcconfig */;
+			baseConfigurationReference = D75DBC2AD91F80AD5F5A3008A221610C /* SwiftyXML.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyXML/SwiftyXML-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyXML/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MODULEMAP_FILE = "Target Support Files/SwiftyXML/SwiftyXML.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SwiftyXML;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		46F2D703F80B91B0A4AED4DB6595B8E7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D924ADD70C808B2955882F2E83D0440 /* Pods-SparkleAutoUpdater.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "-";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -444,7 +351,47 @@
 			};
 			name = Release;
 		};
-		337AD37B27D7FFADF01DD8D7FE35B27B /* Debug */ = {
+		853A35FB36C06FDA617B05E97042B619 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E67FE88AF1AAED28FBD661C26758F59E /* Pods-SparkleAutoUpdater.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-SparkleAutoUpdater/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MODULEMAP_FILE = "Target Support Files/Pods-SparkleAutoUpdater/Pods-SparkleAutoUpdater.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_SparkleAutoUpdater;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C734A39EF0A2FD4BDDD7FE07639BA9C0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -488,191 +435,10 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
-		};
-		45167724C4D16D8CBA42EBF2374C65DF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5810844706DC5E69326D5B2F315F5CC6 /* Pods-SparkleAutoUpdater.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "-";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_VERSION = A;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-SparkleAutoUpdater/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
-				MODULEMAP_FILE = "Target Support Files/Pods-SparkleAutoUpdater/Pods-SparkleAutoUpdater.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_SparkleAutoUpdater;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		6D7B1479C94D6D1195B685988A01CA6F /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B8C7464EF37BB9D32ED5F734A9DFD6D5 /* rebekka.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "-";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_VERSION = A;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/rebekka/rebekka-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/rebekka/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				MODULEMAP_FILE = "Target Support Files/rebekka/rebekka.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = rebekka;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		B10618970C1FA4D546277C1CA4CC4FE6 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B8C7464EF37BB9D32ED5F734A9DFD6D5 /* rebekka.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "-";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_VERSION = A;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/rebekka/rebekka-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/rebekka/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				MODULEMAP_FILE = "Target Support Files/rebekka/rebekka.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = rebekka;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		C66D88DD8677287BCA7987CA1694EB1E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4D8494204DB0435056FE277228C0264E /* SwiftyXML.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "-";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_VERSION = A;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftyXML/SwiftyXML-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwiftyXML/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				MODULEMAP_FILE = "Target Support Files/SwiftyXML/SwiftyXML.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = SwiftyXML;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		DFD12C688A387FAB9D48A8BE549973DB /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4D8494204DB0435056FE277228C0264E /* SwiftyXML.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "-";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_VERSION = A;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftyXML/SwiftyXML-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwiftyXML/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				MODULEMAP_FILE = "Target Support Files/SwiftyXML/SwiftyXML.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = SwiftyXML;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
 		};
 		FC4738C3605827B2CD972C349A860865 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -718,41 +484,68 @@
 			};
 			name = Release;
 		};
+		FFBDE7CA065C3997671686173590BD21 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D75DBC2AD91F80AD5F5A3008A221610C /* SwiftyXML.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyXML/SwiftyXML-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyXML/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MODULEMAP_FILE = "Target Support Files/SwiftyXML/SwiftyXML.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SwiftyXML;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1A4B485A7664D1CBC99822DCBDD3C57E /* Build configuration list for PBXNativeTarget "rebekka" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B10618970C1FA4D546277C1CA4CC4FE6 /* Debug */,
-				6D7B1479C94D6D1195B685988A01CA6F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				337AD37B27D7FFADF01DD8D7FE35B27B /* Debug */,
+				C734A39EF0A2FD4BDDD7FE07639BA9C0 /* Debug */,
 				FC4738C3605827B2CD972C349A860865 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		44AECB2D05B1D304364DAFEBE8229573 /* Build configuration list for PBXNativeTarget "SwiftyXML" */ = {
+		69E15B55FF84AD1F21FA2404C31284DC /* Build configuration list for PBXNativeTarget "Pods-SparkleAutoUpdater" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C66D88DD8677287BCA7987CA1694EB1E /* Debug */,
-				DFD12C688A387FAB9D48A8BE549973DB /* Release */,
+				853A35FB36C06FDA617B05E97042B619 /* Debug */,
+				46F2D703F80B91B0A4AED4DB6595B8E7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5685EC8309BBF5A943612EB687EAC71D /* Build configuration list for PBXNativeTarget "Pods-SparkleAutoUpdater" */ = {
+		A065BC7C285B12BBDE9B1FBE44BB3C92 /* Build configuration list for PBXNativeTarget "SwiftyXML" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				45167724C4D16D8CBA42EBF2374C65DF /* Debug */,
-				2E9690CE9DF2B07AF918C94575466E41 /* Release */,
+				FFBDE7CA065C3997671686173590BD21 /* Debug */,
+				3851AECC318E6AAAFC720F9228085A75 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

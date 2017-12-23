@@ -15,34 +15,45 @@ enum CPProcessWrapperError: String, Error, LocalizedError {
     }
 }
 
-public typealias CPProcessWrapperResult = (String?, Error?) -> Void
-final class CPProcessWrapper {
+final private class _OutputReader: NSObject {
+    public var output: String?
     
-    static var stdOutputCompletion: CPProcessWrapperResult?
-    
-    public class func launch(withLaunchPath launchPath: String, arguments: [String], currentDirectoryPath path: String? = nil, _ completion: @escaping CPProcessWrapperResult) {
-                        
-        stdOutputCompletion = completion
-        let task = Process()
-        let pipe = Pipe()
-        task.standardOutput = pipe
-        NotificationCenter.default.addObserver(self, selector: #selector(readOutput(_:)), name: .NSFileHandleDataAvailable, object: pipe.fileHandleForReading)
-        pipe.fileHandleForReading.waitForDataInBackgroundAndNotify()
-        task.launch(withArguments: arguments, currentDirectoryPath: path, launchPath: launchPath)
-    }
-    
-    public class func launch(withRawInput input: String, _ completion: @escaping CPProcessWrapperResult) {
-        launch(withLaunchPath: "/bin/sh", arguments: ["-c", input], completion)
-    }
-    
-    @objc private class func readOutput(_ notification: Notification) {
-        NotificationCenter.default.removeObserver(self, name: .NSFileHandleDataAvailable, object: nil)
+    @objc func readOutput(_ notification: Notification) {
+        
         guard let fileHandle = notification.object as? FileHandle else { return }
         
         if let result = String(data: fileHandle.availableData, encoding: .utf8) {
-            stdOutputCompletion?(result.replacingOccurrences(of: "\n", with: ""), nil)
-        } else {
-            stdOutputCompletion?(nil, CPProcessWrapperError.errorParsingResult)
+            if output == nil { output = "" }
+            output! += result.replacingOccurrences(of: "\n", with: "")
         }
+    }
+}
+
+final class CPProcessWrapper: Process {
+    
+    /// returns output if exists
+    static func launch(withLaunchPath launchPath: String, arguments: [String], currentDirectoryPath path: String? = nil) -> String? {
+        
+        let task = Process()
+        let pipe = Pipe()
+        let outputReader = _OutputReader()
+        
+        task.standardOutput = pipe
+        
+        NotificationCenter.default.addObserver(outputReader, selector: #selector(outputReader.readOutput(_:)), name: .NSFileHandleDataAvailable, object: pipe.fileHandleForReading)
+        pipe.fileHandleForReading.waitForDataInBackgroundAndNotify()
+        let dispatchGroup = DispatchGroup()
+        dispatchGroup.enter()
+        task.terminationHandler = { process in
+            dispatchGroup.leave()
+        }
+        task.launch(withArguments: arguments, currentDirectoryPath: path, launchPath: launchPath)
+        _ = dispatchGroup.wait(timeout: .distantFuture)
+        return outputReader.output
+    }
+    
+    /// returns string output if it exists
+    public static func launch(withRawInput input: String) -> String? {
+        return CPProcessWrapper.launch(withLaunchPath: "/bin/sh", arguments: ["-c", input])
     }
 }

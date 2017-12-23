@@ -9,7 +9,7 @@
 import Foundation
 import Security
 
-public enum CPFileManagerError : String, Error, LocalizedError {
+internal enum CPFileManagerError : String, Error, LocalizedError {
     
     case fileNotFound = "Info.plist or a subdirectory of it was not found. Check app path directory"
     case plistInInvalidFormat = "Info.plist was not in a readable format."
@@ -26,12 +26,12 @@ public enum CPFileManagerError : String, Error, LocalizedError {
 }
 
 /// tuple representing build version and display version
-public typealias CPFileManagerVersionSet = (String, String)
-final class CPFileManager {
+internal typealias CPFileManagerVersionSet = (String, String)
+final internal class CPFileManager {
     
     private static let fm : FileManager = .default
     
-    public class func updateVersionNumber(forAppAtPath path: String) throws -> CPFileManagerVersionSet {
+    public static func updateVersionNumber(forAppAtPath path: String) throws -> CPFileManagerVersionSet {
         
         let url = URL(fileURLWithPath: path)
         let infoPlistURL = url.appendingPathComponent("Contents").appendingPathComponent("Info.plist")
@@ -40,51 +40,47 @@ final class CPFileManager {
             throw CPFileManagerError.fileNotFound
         }
         
-        do {
-            
-            let aPlist = try plist(forURL: infoPlistURL)
-            guard let bundleBuildVersionString = (aPlist.value(forKey: "CFBundleShortVersionString") as? NSString)?.floatValue,
-                  let bundleVersionString = (aPlist.value(forKey: "CFBundleVersion") as? NSString)?.floatValue else {
-                throw CPFileManagerError.bundleVersionNotFound
-            }
-            
-            let newDisplayVersionString = "\(bundleBuildVersionString + 0.1)"
-            let newBundleVersionString = "\(bundleVersionString + 0.1)"
-            
-            let task = Process()
-            task.launch(withArguments: ["write", infoPlistURL.deletingPathExtension().lastPathComponent, "CFBundleVersion", newBundleVersionString],
-                        currentDirectoryPath: infoPlistURL.deletingLastPathComponent().path,
-                        launchPath: "/usr/bin/defaults")
-            let task2 = Process()
-            task2.launch(withArguments: ["write", infoPlistURL.deletingPathExtension().lastPathComponent, "CFBundleShortVersionString", newDisplayVersionString],
-                        currentDirectoryPath: infoPlistURL.deletingLastPathComponent().path,
-                        launchPath: "/usr/bin/defaults")
-            
-            return (newDisplayVersionString, newBundleVersionString)
-        }catch let error {
-            throw error
-        }                
+        let aPlist = try plist(forURL: infoPlistURL)
+        guard let bundleBuildVersionString = (aPlist.value(forKey: "CFBundleShortVersionString") as? NSString)?.floatValue,
+              let bundleVersionString = (aPlist.value(forKey: "CFBundleVersion") as? NSString)?.floatValue else {
+            throw CPFileManagerError.bundleVersionNotFound
+        }
+        
+        let newDisplayVersionString = "\(bundleBuildVersionString + 0.1)"
+        let newBundleVersionString = "\(bundleVersionString + 0.1)"
+        
+        let task = Process()
+        task.launch(withArguments: ["write", infoPlistURL.deletingPathExtension().lastPathComponent, "CFBundleVersion", newBundleVersionString],
+                    currentDirectoryPath: infoPlistURL.deletingLastPathComponent().path,
+                    launchPath: "/usr/bin/defaults")
+        let task2 = Process()
+        task2.launch(withArguments: ["write", infoPlistURL.deletingPathExtension().lastPathComponent, "CFBundleShortVersionString", newDisplayVersionString],
+                    currentDirectoryPath: infoPlistURL.deletingLastPathComponent().path,
+                    launchPath: "/usr/bin/defaults")
+        
+        return (newDisplayVersionString, newBundleVersionString)        
+    }
+    
+    public static func quarantine(appAtPath path: String) {        
+        Process().launch(withArguments: ["-r", "-d", "com.apple.quarantine", path], launchPath: "/usr/bin/xattr")
     }
     
     /// returns url of new zip file
-    public class func zip(folderAtPath path: String, displayVersion: String) throws -> URL {
+    public static func zip(folderAtPath path: String, displayVersion: String) throws -> URL {
         
         let zippedURL = URL(fileURLWithPath: "\(path)\(displayVersion)").appendingPathExtension("zip")
         
         let task = Process()
-        task.launch(withArguments: ["-r", "-q", zippedURL.lastPathComponent, (path as NSString).lastPathComponent],
+        task.launch(withArguments: ["-c", "-k", "--sequesterRsrc", "--keepParent", (path as NSString).lastPathComponent, zippedURL.lastPathComponent],
                     currentDirectoryPath: URL(fileURLWithPath: path).deletingLastPathComponent().path,
-                    launchPath: "/usr/bin/zip")
+                    launchPath: "/usr/bin/ditto")
         
-        guard fm.fileExists(atPath: zippedURL.path) else {
-            throw CPFileManagerError.failureZippingFile
-        }
-        
+        guard fm.fileExists(atPath: zippedURL.path) else { throw CPFileManagerError.failureZippingFile }
         return zippedURL
     }
     
     /// returns new url
-    public class func rename(fileAtURL url: URL, toFileName name: String) throws -> URL {
+    public static func rename(fileAtURL url: URL, toFileName name: String) throws -> URL {
         let lastComponent = (name as NSString).lastPathComponent
         let newURL = url.deletingLastPathComponent().appendingPathComponent(lastComponent)
         do {
@@ -99,19 +95,18 @@ final class CPFileManager {
         }
     }
     
-    public class func getSignature(forZipAtURL url: URL, pathOfDSAKeyFile path: String, _ completion: @escaping CPProcessWrapperResult) {
+    public static func getSignature(forZipAtURL url: URL, pathOfDSAKeyFile path: String) throws -> String? {
         
-        guard let binaryPath = Bundle.main.path(forResource: "sign_update", ofType: nil) else {
-            return completion(nil, CPFileManagerError.errorFindingExecutable)
+        guard let binaryPath = Bundle(for: CPFileManager.self).path(forResource: "sign_update", ofType: nil) else {
+            throw CPFileManagerError.errorFindingExecutable
         }
         guard fm.fileExists(atPath: path) else {
-            return completion(nil, CPFileManagerError.dsaKeyFileNotFound)
+            throw CPFileManagerError.dsaKeyFileNotFound
         }
-        
-        CPProcessWrapper.launch(withLaunchPath: binaryPath, arguments: [url.lastPathComponent, path], currentDirectoryPath: url.deletingLastPathComponent().path, completion)
+        return CPProcessWrapper.launch(withLaunchPath: binaryPath, arguments: [url.lastPathComponent, path], currentDirectoryPath: url.deletingLastPathComponent().path)
     }
     
-    private class func plist(forURL url: URL) throws -> NSMutableDictionary {
+    private static func plist(forURL url: URL) throws -> NSMutableDictionary {
         do {
             let data = try Data(contentsOf: url)
             guard let plist = try PropertyListSerialization.propertyList(from: data, options: .mutableContainers, format: nil) as? NSMutableDictionary else {

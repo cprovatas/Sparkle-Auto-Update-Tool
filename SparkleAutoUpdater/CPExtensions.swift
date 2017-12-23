@@ -8,41 +8,9 @@
 
 import Foundation
 import Cocoa
+import SwiftyXML
 
-public extension NSView {
-    public func presentAlert(_ message: String? = nil, retryButtonText: String? = nil, retryHandler: (() -> Void)? = nil) {
-        DispatchQueue.main.async {
-            self._presentAlert(message, retryButtonText: retryButtonText, retryHandler: retryHandler)
-        }
-    }
-    
-    private func _presentAlert(_ message: String? = nil, retryButtonText: String? = nil, retryHandler: (() -> Void)? = nil) {
-        if window == nil {
-            return Swift.print("\(self.self) Error Function '\(#function)' Line: \(#line) No window found.")
-        }
-        
-        let alert = NSAlert()
-        alert.messageText = message ?? ""
-        alert.alertStyle = .critical
-        alert.addButton(withTitle: "Cancel")
-        if retryHandler != nil {
-            alert.addButton(withTitle: retryButtonText ?? "Retry")
-        }
-        if window == nil { return }
-        alert.beginSheetModal(for: window ?? NSWindow()) { (response) in
-            
-            if response != .alertFirstButtonReturn {
-                retryHandler?()
-                if self.window != nil {
-                    self.window!.endSheet(self.window!)
-                }
-            }
-            
-            NSApp.stopModal() /// this may have fixed some sporadic crashes we were getting w/ nsalert
-        }
-    }
-}
-
+private let formatter: DateFormatter = DateFormatter()
 public extension Process {
     public func launch(withArguments args: [String], currentDirectoryPath: String? = nil, launchPath: String) {
         arguments = args
@@ -55,10 +23,40 @@ public extension Process {
     }
 }
 
+extension Date {
+    func string(withFormat format: String) -> String {
+        formatter.dateFormat = format
+        return formatter.string(from: self)
+    }
+}
+
+extension String: Error, LocalizedError {
+    public var errorDescription: String? {
+        return self
+    }
+}
+
 extension URL {
     public var escapingSpaces: URL {
         let aPath = path.replacingOccurrences(of: " ", with: "\\ ")
         return URL(fileURLWithPath: aPath)
+    }
+}
+
+extension Collection {
+    
+    /// Returns the element at the specified index iff it is within bounds, otherwise nil.
+    subscript (safe index: Index) -> Element? {
+        return indices.contains(index) ? self[index] : nil
+    }
+}
+
+extension XML {
+    func copied() -> XML {
+        let copy = XML(name: name, attributes: attributes, value: value)
+        copy.children = children
+        copy.parent = parent
+        return copy
     }
 }
 

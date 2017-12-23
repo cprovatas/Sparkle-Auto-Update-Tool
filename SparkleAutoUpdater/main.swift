@@ -8,171 +8,86 @@
 
 import Cocoa
 
-fileprivate extension Int {
-    fileprivate static let appPathTextFieldTag = 0
+public func run() {
+    do {
+        try _SparkleAutoUpdater().executeProcess()
+    } catch let error {
+        _SparkleAutoUpdater.updateStatus(error.localizedDescription)
+    }
 }
 
-final class CPMainViewController : NSViewController {
+private struct _Config: Decodable {
+    let appBundlePath: String
+    let dsaPrivPath: String
+    let httpUpdatesFolderPath: String
+    let appcastFileName: String
+    let sftpUsername: String
+    let sftpPassword: String
+    let updateNotes: String
+}
+
+final private class _SparkleAutoUpdater: Decodable {
+    /// TODO: spaces don't work
+    /// TODO: see if you can add comments into json
+    private let config: _Config
+    private let publicPathURL: URL
+    private let host: String
     
-    @IBOutlet private weak var progressTextField: NSTextField!
-    @IBOutlet private weak var progressIndicator: NSProgressIndicator!
-    @IBOutlet private weak var appPathTextField: NSTextField!
-    @IBOutlet private weak var dsaPrivateKeyTextField: NSTextField!
-    @IBOutlet private weak var pathToUpdatesTextField: NSTextField!
-    @IBOutlet private weak var publicPathToUpdatesTextField: NSTextField!
-    @IBOutlet private weak var sftpUsernameTextField: NSTextField!
-    @IBOutlet private weak var sftpPasswordTextField: NSSecureTextField!
-    @IBOutlet private var updateNotesTextView: NSTextView!
-    /// is set only when it is clicked
-    private var updateButton : NSButton? = nil
-    
-    @IBAction private func plusClicked(_ sender: NSButton) {
-        
-        let openPanel = NSOpenPanel()
-        openPanel.allowsMultipleSelection = false
-        openPanel.canChooseDirectories = false
-        openPanel.beginSheetModal(for: view.window!) { (response) in
-            
-            guard response == .OK, let urlString = openPanel.url?.path else {
-                return Swift.print("\(self.self) Error Function: '\(#function)' Line \(#line).  Couldn't get url from open panel")
-            }
-            let textField = sender.tag == .appPathTextFieldTag ? self.appPathTextField : self.dsaPrivateKeyTextField
-            textField!.stringValue = urlString
-        }
-    }
-    
-    private func fail(_ message: String) {
-        updateStatus("")
-        DispatchQueue.main.async {
-            self.progressIndicator.isHidden = true
-            self.updateButton!.isEnabled = true
-            self.updateButton!.alphaValue = 1
-        }
-    }
-    
-    /// only fires completion on success, wrapper for upload function
-    private func uploadFile(atURL url: URL, _ completion: @escaping () -> Void) {
-        guard let publicPathURL = URL(string: publicPathToUpdatesTextField.stringValue),
-            let host = publicPathURL.host,
-            let remoteURL = URL(string: pathToUpdatesTextField.stringValue) else {
-                return debugPrint("Unable to get host for url \(url)")
-        }
-        
-        CPSFTPManager.uploadFile(atFileURL: url,
-                                 toRemoteURL: remoteURL,
-                                 username: sftpUsernameTextField.stringValue,
-                                 password: sftpPasswordTextField.stringValue,
-                                 host: host) { (success, error) in
-            
-            if let success = success as? Bool, success {
-                return completion()
-            }
-            if let error = error {
-                return self.fail(error.localizedDescription)
-            }
-            self.fail("File at url '\(url)' failed to upload 😭")
-        }
-    }
-    
-    /// only fires completion if successful, wrapper for download function
-    private func downloadAppcast(_ completion: @escaping (URL) throws -> Void) {
-        CPSFTPManager.downloadAppCastFile({ (url, error) in
-            if let url = url as? URL {
-                do {
-                    try completion(url)
-                }catch let error {
-                    self.fail(error.localizedDescription)
-                }
-            }else if let error = error {
-                self.fail(error.localizedDescription)
-            }
-        })
-    }
-    
-    @IBAction private func updateClicked(_ sender: NSButton) {
-        updateButton = sender
-        sender.isEnabled = false
-        sender.alphaValue = 0.5
-        DispatchQueue.global(qos: .background).async {
-            self.executeProcess()
-        }
-    }
-    
-    private func executeProcess() {
-        let appPath = appPathTextField.stringValue
-        let dsaPath = dsaPrivateKeyTextField.stringValue
+    init() {
         do {
-
-            guard let publicPathURL = URL(string: publicPathToUpdatesTextField.stringValue) else {
-                throw CPMainViewControllerError.invalidUpdatePath
+            let bundle = Bundle(for: _SparkleAutoUpdater.self)
+            guard let configPath = bundle.path(forResource: "config", ofType: "json") else {
+                fatalError("config.json not found!, check framework bundle!")                
             }
-
-            /// 1 - Input validation, if fields are empty etc...
-            /// 2 - open .app and update version
-            updateStatus("Updating version number...")
-            let versionSet = try CPFileManager.updateVersionNumber(forAppAtPath: appPath)
-            /// 3 - compress .app to zip
-            /// 4 - rename .zip
-            updateStatus("Zipping and renaming app...")
-            let zipURL = try CPFileManager.zip(folderAtPath: appPath, displayVersion: versionSet.0)
-            /// 5 - generate key from .priv file
-            updateStatus("Fetching DSA Key...")
-            CPFileManager.getSignature(forZipAtURL: zipURL, pathOfDSAKeyFile: dsaPath, { (signature, error) in
-                if let error = error {
-                   return self.fail(error.localizedDescription)
-                }
-                if let signature = signature {
-                    /// 7 - upload .zip
-                    self.updateStatus("Uploading Zip...")
-                    self.uploadFile(atURL: zipURL, {
-                        self.updateStatus("Downloading App Cast File and renaming...")
-                        /// 8 - download .appcast and rename to .xml
-                        self.downloadAppcast({ (url) in
-                            /// 9 edit app cast
-                            self.updateStatus("Updating App Cast File...")
-                            let notes = self.updateNotesTextView.string
-
-                            let zipURL = publicPathURL.appendingPathComponent(zipURL.lastPathComponent)
-                            try CPXMLManager.editUpdateNotes(forXMLFileatURL: url, versionSet: versionSet, publicZipURL: zipURL, dsaSignature: signature, updateNotes: notes)
-                            //let appCastName = CPFTPManager.shared.firstXMLFileName
-                            let appCastName = "Testingitout.xml"
-                            let renamedURL = try CPFileManager.rename(fileAtURL: url, toFileName: appCastName)
-
-                            self.updateStatus("Uploading App Cast File...")
-                            self.uploadFile(atURL: renamedURL, { self.finish() })
-                        })
-                    })
-                }
-            })
-            
+            let data = try Data(contentsOf: URL(fileURLWithPath: configPath))
+            config = try JSONDecoder().decode(_Config.self, from: data)
+            guard let publicPathURL = URL(string: config.httpUpdatesFolderPath), let host = publicPathURL.host else {
+                fatalError("Invalid update path or host")
+            }
+            self.publicPathURL = publicPathURL
+            self.host = host
         } catch let error {
-            debugPrint(error)
+            fatalError(error.localizedDescription)
         }
     }
     
-    private func finish() {
-        updateStatus("Success!")
-        DispatchQueue.main.async {
-            self.progressIndicator.isHidden = true
-            self.updateButton?.isEnabled = true
-            self.updateButton?.alphaValue = 1
-        }
+    public func executeProcess() throws {
+        
+        /// Input validation, if fields are empty etc...
+        /// open .app and update version
+        _SparkleAutoUpdater.updateStatus("Updating version number...")
+        let versionSet = try CPFileManager.updateVersionNumber(forAppAtPath: config.appBundlePath)
+        /// quarantine app from gatekeeper
+        _SparkleAutoUpdater.updateStatus("Quarantining App...")
+        CPFileManager.quarantine(appAtPath: config.appBundlePath)
+        /// compress .app to zip
+        _SparkleAutoUpdater.updateStatus("Zipping and renaming app...")
+        let zipURL = try CPFileManager.zip(folderAtPath: config.appBundlePath, displayVersion: versionSet.0)
+        /// generate key from .priv file
+        _SparkleAutoUpdater.updateStatus("Fetching DSA Key...")
+        
+        guard let signature = try CPFileManager.getSignature(forZipAtURL: zipURL, pathOfDSAKeyFile: config.dsaPrivPath) else { throw "Unable to fetch signature!" }
+        /// upload .zip
+        _SparkleAutoUpdater.updateStatus("Uploading Zip...")
+        try CPSFTPManager.uploadFile(atFileURL: zipURL, toRemoteURL: publicPathURL, username: config.sftpUsername, password: config.sftpPassword, host: host)
+        _SparkleAutoUpdater.updateStatus("Downloading App Cast File...")
+        let remoteAppcastURL = publicPathURL.appendingPathComponent(config.appcastFileName)
+        /// download .appcast
+        let localAppcastURL = try CPSFTPManager.downloadFile(fromRemoteURL: remoteAppcastURL, username: config.sftpUsername, password: config.sftpPassword, host: host)
+        ///  edit app cast
+        _SparkleAutoUpdater.updateStatus("Updating App Cast File...")
+        let aZipURL = publicPathURL.appendingPathComponent(zipURL.lastPathComponent)
+        try CPXMLManager.editUpdateNotes(forXMLFileAtURL: localAppcastURL, versionSet: versionSet, publicZipURL: aZipURL, dsaSignature: signature, updateNotes: config.updateNotes)
+        _SparkleAutoUpdater.updateStatus("Uploading App Cast File...")
+        try CPSFTPManager.uploadFile(atFileURL: localAppcastURL, toRemoteURL: remoteAppcastURL, username: config.sftpUsername, password: config.sftpPassword, host: host)
+        /// Clean up
+        _SparkleAutoUpdater.updateStatus("Cleaning up...")
+        try FileManager.default.removeItem(at: zipURL)
+        try FileManager.default.removeItem(at: localAppcastURL)
+        _SparkleAutoUpdater.updateStatus("Success! 🎊")
     }
     
-    private func updateStatus(_ str: String) {
-        DispatchQueue.main.async {
-            if self.progressIndicator.isHidden {
-                self.progressIndicator.isHidden = false
-                self.progressIndicator.startAnimation(nil)
-            }
-            self.progressTextField.stringValue = str
-        }
-    }
-}
-
-enum CPMainViewControllerError : String, Error, LocalizedError {
-    case invalidUpdatePath = "Invalid update path, Couldn't construct URL"
-    var errorDescription: String? {
-        return rawValue
+    static func updateStatus(_ status: String) {
+        print("\(Date().string(withFormat: "YYYY-M-d h:mm:s")) <Notice> [SparkleAutoUpdater] - \(status)")
     }
 }
