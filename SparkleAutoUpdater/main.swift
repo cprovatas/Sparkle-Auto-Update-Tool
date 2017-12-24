@@ -35,9 +35,9 @@ final private class _SparkleAutoUpdater: Decodable {
     
     init() {
         do {
-            let bundle = Bundle(for: _SparkleAutoUpdater.self)
+            let bundle: Bundle = .main
             guard let configPath = bundle.path(forResource: "config", ofType: "json") else {
-                fatalError("config.json not found!, check framework bundle!")                
+                fatalError("config.json not found! Copy https://github.com/cprovatas/Sparkle-Auto-Update-Tool/blob/master/SparkleAutoUpdater/config.json into your project!")                
             }
             let data = try Data(contentsOf: URL(fileURLWithPath: configPath))
             config = try JSONDecoder().decode(_Config.self, from: data)
