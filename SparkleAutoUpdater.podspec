@@ -91,9 +91,9 @@ Pod::Spec.new do |s|
   #  non-essential files like tests, examples and documentation.
   #
 
-   s.resources = "Resources/"
+# s.resources = "Resources/"
 
-  # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
+   s.preserve_paths = "Resources"
 
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
