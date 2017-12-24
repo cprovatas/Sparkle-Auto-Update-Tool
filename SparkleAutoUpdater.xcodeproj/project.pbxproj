@@ -14,11 +14,11 @@
 		3E819FEF1FE8B3F900FD383F /* CPSFTPManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E92DAD71F0B24AD00D98D7B /* CPSFTPManager.swift */; };
 		3E819FF01FE8B3F900FD383F /* CPProcessWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4AA01D1FE479C700BE6EF0 /* CPProcessWrapper.swift */; };
 		3E819FF11FE8B3F900FD383F /* CPXMLManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E07EE431F0DAB94006ED43F /* CPXMLManager.swift */; };
-		3EF5CA3D1FEEED4000FF4D21 /* sshpass in Resources */ = {isa = PBXBuildFile; fileRef = 3EF5CA391FEEED4000FF4D21 /* sshpass */; };
-		3EF5CA3E1FEEED4000FF4D21 /* sign_update in Resources */ = {isa = PBXBuildFile; fileRef = 3EF5CA3A1FEEED4000FF4D21 /* sign_update */; };
-		3EF5CA3F1FEEED4000FF4D21 /* generate_keys in Resources */ = {isa = PBXBuildFile; fileRef = 3EF5CA3B1FEEED4000FF4D21 /* generate_keys */; };
-		3EF5CA401FEEED4000FF4D21 /* BinaryDelta in Resources */ = {isa = PBXBuildFile; fileRef = 3EF5CA3C1FEEED4000FF4D21 /* BinaryDelta */; };
 		3EF5CA431FEFF3D700FF4D21 /* XML.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF5CA421FEFF3D700FF4D21 /* XML.swift */; };
+		3EF5CA481FEFFAF200FF4D21 /* sign_update in Resources */ = {isa = PBXBuildFile; fileRef = 3EF5CA441FEFFAF200FF4D21 /* sign_update */; };
+		3EF5CA491FEFFAF200FF4D21 /* sshpass in Resources */ = {isa = PBXBuildFile; fileRef = 3EF5CA451FEFFAF200FF4D21 /* sshpass */; };
+		3EF5CA4A1FEFFAF200FF4D21 /* BinaryDelta in Resources */ = {isa = PBXBuildFile; fileRef = 3EF5CA461FEFFAF200FF4D21 /* BinaryDelta */; };
+		3EF5CA4B1FEFFAF200FF4D21 /* generate_keys in Resources */ = {isa = PBXBuildFile; fileRef = 3EF5CA471FEFFAF200FF4D21 /* generate_keys */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,11 +33,11 @@
 		3ED6BAE01F099AEA0008993A /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		3ED6BAF31F09BA460008993A /* CPFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPFileManager.swift; sourceTree = "<group>"; };
 		3ED6BAF51F09C0740008993A /* CPExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPExtensions.swift; sourceTree = "<group>"; };
-		3EF5CA391FEEED4000FF4D21 /* sshpass */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = sshpass; path = Resources/sshpass; sourceTree = SOURCE_ROOT; };
-		3EF5CA3A1FEEED4000FF4D21 /* sign_update */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = sign_update; path = Resources/sign_update; sourceTree = SOURCE_ROOT; };
-		3EF5CA3B1FEEED4000FF4D21 /* generate_keys */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = generate_keys; path = Resources/generate_keys; sourceTree = SOURCE_ROOT; };
-		3EF5CA3C1FEEED4000FF4D21 /* BinaryDelta */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = BinaryDelta; path = Resources/BinaryDelta; sourceTree = SOURCE_ROOT; };
 		3EF5CA421FEFF3D700FF4D21 /* XML.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XML.swift; sourceTree = "<group>"; };
+		3EF5CA441FEFFAF200FF4D21 /* sign_update */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = sign_update; path = Resources/sign_update; sourceTree = "<group>"; };
+		3EF5CA451FEFFAF200FF4D21 /* sshpass */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = sshpass; path = Resources/sshpass; sourceTree = "<group>"; };
+		3EF5CA461FEFFAF200FF4D21 /* BinaryDelta */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = BinaryDelta; path = Resources/BinaryDelta; sourceTree = "<group>"; };
+		3EF5CA471FEFFAF200FF4D21 /* generate_keys */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = generate_keys; path = Resources/generate_keys; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,10 +54,10 @@
 		3E92DAB51F0B15E500D98D7B /* Sparkle Key Generator */ = {
 			isa = PBXGroup;
 			children = (
-				3EF5CA3C1FEEED4000FF4D21 /* BinaryDelta */,
-				3EF5CA3B1FEEED4000FF4D21 /* generate_keys */,
-				3EF5CA3A1FEEED4000FF4D21 /* sign_update */,
-				3EF5CA391FEEED4000FF4D21 /* sshpass */,
+				3EF5CA461FEFFAF200FF4D21 /* BinaryDelta */,
+				3EF5CA471FEFFAF200FF4D21 /* generate_keys */,
+				3EF5CA441FEFFAF200FF4D21 /* sign_update */,
+				3EF5CA451FEFFAF200FF4D21 /* sshpass */,
 			);
 			name = "Sparkle Key Generator";
 			sourceTree = "<group>";
@@ -191,11 +191,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3EF5CA3E1FEEED4000FF4D21 /* sign_update in Resources */,
-				3EF5CA401FEEED4000FF4D21 /* BinaryDelta in Resources */,
-				3EF5CA3D1FEEED4000FF4D21 /* sshpass in Resources */,
+				3EF5CA491FEFFAF200FF4D21 /* sshpass in Resources */,
+				3EF5CA4B1FEFFAF200FF4D21 /* generate_keys in Resources */,
+				3EF5CA481FEFFAF200FF4D21 /* sign_update in Resources */,
+				3EF5CA4A1FEFFAF200FF4D21 /* BinaryDelta in Resources */,
 				3E8003471FEDC8A800AF2BBE /* config.json in Resources */,
-				3EF5CA3F1FEEED4000FF4D21 /* generate_keys in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
