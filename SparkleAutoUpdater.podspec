@@ -91,8 +91,8 @@ Pod::Spec.new do |s|
   #  non-essential files like tests, examples and documentation.
   #
 
-   s.resources = "SparkleAutoUpdater/Resources/*."
-#  s.preserve_paths = "Resources"
+    s.resources = "SparkleAutoUpdater/Resources/sign_update"
+# s.preserve_paths = "SparkleAutoUpdater/Resources/sign_update"
 
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
