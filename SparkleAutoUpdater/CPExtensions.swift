@@ -8,7 +8,6 @@
 
 import Foundation
 import Cocoa
-import SwiftyXML
 
 private let formatter: DateFormatter = DateFormatter()
 public extension Process {
@@ -48,6 +47,15 @@ extension Collection {
     /// Returns the element at the specified index iff it is within bounds, otherwise nil.
     subscript (safe index: Index) -> Element? {
         return indices.contains(index) ? self[index] : nil
+    }
+}
+
+extension XML {
+    func copied() -> XML {
+        let copy = XML(name: name, attributes: attributes, value: value)
+        copy.parent = parent
+        copy.children = children
+        return copy
     }
 }
 

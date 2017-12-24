@@ -22,7 +22,7 @@ final class CPXMLManager {
                 throw CPXMLManagerError.noItemsFound
             }
             
-            let newItem = firstChild.children.remove(at: lastItemIndex)
+            let newItem = firstChild.children.remove(at: lastItemIndex).copied()
             
             newItem.children[0].value = "Version \(versionSet.0)"
             newItem.children[1].value = nil

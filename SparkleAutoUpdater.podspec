@@ -106,6 +106,6 @@ Pod::Spec.new do |s|
 
     s.requires_arc = true
   s.framework = "Foundation"
-  s.dependency "SwiftyXML"
+  s.dependency 'SwiftyXML', git: 'https://github.com/cprovatas/SwiftyXML.git', branch: 'master'
 
 end

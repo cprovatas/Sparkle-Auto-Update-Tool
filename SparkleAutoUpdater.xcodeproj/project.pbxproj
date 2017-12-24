@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1ED9E0B3ED72B19C0F90E861 /* Pods_SparkleAutoUpdater.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DD375E82D1677FC4ABA7970 /* Pods_SparkleAutoUpdater.framework */; };
 		3E8003471FEDC8A800AF2BBE /* config.json in Resources */ = {isa = PBXBuildFile; fileRef = 3E8003461FEDC8A800AF2BBE /* config.json */; };
 		3E819FEC1FE8B3F400FD383F /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED6BAE01F099AEA0008993A /* main.swift */; };
 		3E819FED1FE8B3F900FD383F /* CPExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED6BAF51F09C0740008993A /* CPExtensions.swift */; };
@@ -19,6 +18,7 @@
 		3EF5CA3E1FEEED4000FF4D21 /* sign_update in Resources */ = {isa = PBXBuildFile; fileRef = 3EF5CA3A1FEEED4000FF4D21 /* sign_update */; };
 		3EF5CA3F1FEEED4000FF4D21 /* generate_keys in Resources */ = {isa = PBXBuildFile; fileRef = 3EF5CA3B1FEEED4000FF4D21 /* generate_keys */; };
 		3EF5CA401FEEED4000FF4D21 /* BinaryDelta in Resources */ = {isa = PBXBuildFile; fileRef = 3EF5CA3C1FEEED4000FF4D21 /* BinaryDelta */; };
+		3EF5CA431FEFF3D700FF4D21 /* XML.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF5CA421FEFF3D700FF4D21 /* XML.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,9 +37,7 @@
 		3EF5CA3A1FEEED4000FF4D21 /* sign_update */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = sign_update; path = Resources/sign_update; sourceTree = SOURCE_ROOT; };
 		3EF5CA3B1FEEED4000FF4D21 /* generate_keys */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = generate_keys; path = Resources/generate_keys; sourceTree = SOURCE_ROOT; };
 		3EF5CA3C1FEEED4000FF4D21 /* BinaryDelta */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = BinaryDelta; path = Resources/BinaryDelta; sourceTree = SOURCE_ROOT; };
-		6DD375E82D1677FC4ABA7970 /* Pods_SparkleAutoUpdater.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SparkleAutoUpdater.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B6AF3C141DB1DE968C5021B1 /* Pods-SparkleAutoUpdater.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SparkleAutoUpdater.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SparkleAutoUpdater/Pods-SparkleAutoUpdater.debug.xcconfig"; sourceTree = "<group>"; };
-		F0962C687C949FACED5C3134 /* Pods-SparkleAutoUpdater.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SparkleAutoUpdater.release.xcconfig"; path = "Pods/Target Support Files/Pods-SparkleAutoUpdater/Pods-SparkleAutoUpdater.release.xcconfig"; sourceTree = "<group>"; };
+		3EF5CA421FEFF3D700FF4D21 /* XML.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XML.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,22 +45,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1ED9E0B3ED72B19C0F90E861 /* Pods_SparkleAutoUpdater.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2A9B438AEC0630FE7027D2D7 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				B6AF3C141DB1DE968C5021B1 /* Pods-SparkleAutoUpdater.debug.xcconfig */,
-				F0962C687C949FACED5C3134 /* Pods-SparkleAutoUpdater.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		3E92DAB51F0B15E500D98D7B /* Sparkle Key Generator */ = {
 			isa = PBXGroup;
 			children = (
@@ -79,7 +67,6 @@
 			children = (
 				3E92DACF1F0B220600D98D7B /* Foundation.framework */,
 				3E92DACE1F0B21FA00D98D7B /* CFNetwork.framework */,
-				6DD375E82D1677FC4ABA7970 /* Pods_SparkleAutoUpdater.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -90,7 +77,6 @@
 				3ED6BADD1F099AEA0008993A /* SparkleAutoUpdater */,
 				3ED6BADC1F099AEA0008993A /* Products */,
 				3E92DACD1F0B21FA00D98D7B /* Frameworks */,
-				2A9B438AEC0630FE7027D2D7 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -108,6 +94,7 @@
 				3ED6BAE01F099AEA0008993A /* main.swift */,
 				3E8003461FEDC8A800AF2BBE /* config.json */,
 				3E81A00B1FE8B75D00FD383F /* Info.plist */,
+				3EF5CA411FEFF3C100FF4D21 /* Supporting Files */,
 				3ED6BAF21F09BA370008993A /* Utility */,
 			);
 			path = SparkleAutoUpdater;
@@ -124,6 +111,14 @@
 				3E07EE431F0DAB94006ED43F /* CPXMLManager.swift */,
 			);
 			name = Utility;
+			sourceTree = "<group>";
+		};
+		3EF5CA411FEFF3C100FF4D21 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3EF5CA421FEFF3D700FF4D21 /* XML.swift */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,12 +138,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3E1FEE141FE8B1F500073BDE /* Build configuration list for PBXNativeTarget "SparkleAutoUpdater" */;
 			buildPhases = (
-				BE43E5D52BADA739F3D6D05F /* [CP] Check Pods Manifest.lock */,
 				3E1FEE0A1FE8B1F500073BDE /* Sources */,
 				3E1FEE0B1FE8B1F500073BDE /* Frameworks */,
 				3E1FEE0C1FE8B1F500073BDE /* Headers */,
 				3E1FEE0D1FE8B1F500073BDE /* Resources */,
-				D96E168742B05D66A490C03F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -208,47 +201,12 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		BE43E5D52BADA739F3D6D05F /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-SparkleAutoUpdater-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D96E168742B05D66A490C03F /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SparkleAutoUpdater/Pods-SparkleAutoUpdater-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		3E1FEE0A1FE8B1F500073BDE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3EF5CA431FEFF3D700FF4D21 /* XML.swift in Sources */,
 				3E819FED1FE8B3F900FD383F /* CPExtensions.swift in Sources */,
 				3E819FEF1FE8B3F900FD383F /* CPSFTPManager.swift in Sources */,
 				3E819FF11FE8B3F900FD383F /* CPXMLManager.swift in Sources */,
@@ -263,7 +221,6 @@
 /* Begin XCBuildConfiguration section */
 		3E1FEE151FE8B1F500073BDE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B6AF3C141DB1DE968C5021B1 /* Pods-SparkleAutoUpdater.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -293,7 +250,6 @@
 		};
 		3E1FEE161FE8B1F500073BDE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F0962C687C949FACED5C3134 /* Pods-SparkleAutoUpdater.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
