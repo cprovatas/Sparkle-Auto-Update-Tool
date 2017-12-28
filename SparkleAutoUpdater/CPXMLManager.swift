@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import SwiftyXML
 
 final class CPXMLManager {
     
